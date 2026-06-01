@@ -122,52 +122,48 @@ export default function WhyChooseIndosol() {
       cardsRef.current.forEach((card, index) => {
         const heading = card.querySelector("h3");
         const paragraph = card.querySelector("span");
+        const icon = card.querySelector(".card-icon");
 
-        // HOVER
-        card.addEventListener("mouseenter", () => {
+        const handleEnter = () => {
           gsap.to(card, {
-            backgroundColor: hoverColors[index],
-            y: -8,
-            scale: 1.02,
+            backgroundColor: "#f5f5f5",
+            boxShadow:
+              "0 24px 48px rgba(29,78,216,0.12), 0 4px 12px rgba(0,0,0,0.06)",
+            borderColor: "rgba(29,78,216,0.25)",
+            // y: -8, // optional lift effect
             duration: 0.35,
             ease: "power2.out",
           });
 
-          gsap.to(heading, {
-            color: "#ffffff",
-            duration: 0.3,
+          gsap.to(icon, {
+            rotation: 25,
+            scale: 1.1,
+            duration: 0.4,
+            ease: "power2.out",
+            transformOrigin: "center center",
           });
+        };
 
-          if (paragraph) {
-            gsap.to(paragraph, {
-              color: "#ffffff",
-              duration: 0.3,
-            });
-          }
-        });
-
-        // LEAVE
-        card.addEventListener("mouseleave", () => {
+        const handleLeave = () => {
           gsap.to(card, {
             backgroundColor: "#f8f8f8",
+            boxShadow: "0 0 0 rgba(0,0,0,0)",
+            borderColor: "#ececec",
             y: 0,
-            scale: 1,
-            duration: 0.35,
+            duration: 0,
             ease: "power2.out",
           });
 
-          gsap.to(heading, {
-            color: "#111827",
-            duration: 0.3,
+          gsap.to(icon, {
+            rotation: 0,
+            scale: 1,
+            duration: 0.4,
+            ease: "power2.out",
           });
+        };
 
-          if (paragraph) {
-            gsap.to(paragraph, {
-              color: "#6b7280",
-              duration: 0.3,
-            });
-          }
-        });
+        card.addEventListener("mouseenter", handleEnter);
+        card.addEventListener("mouseleave", handleLeave);
       });
     }, sectionRef);
 
@@ -217,7 +213,7 @@ export default function WhyChooseIndosol() {
                     <img
                       src="/images/Home/global-search.svg"
                       alt="img"
-                      className="w-1/2 h-1/2 object-cover object-center"
+                      className="card-icon w-1/2 h-1/2 object-cover object-center"
                     />
                   </div>
                 </div>
@@ -228,8 +224,8 @@ export default function WhyChooseIndosol() {
                   </h3>
 
                   <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex">
-                    Products sourced from trusted Indian manufacturers
-                    with complete documentation.
+                    Products sourced from trusted Indian manufacturers with
+                    complete documentation.
                   </span>
                 </div>
               </div>
@@ -245,7 +241,7 @@ export default function WhyChooseIndosol() {
                     <img
                       src="/images/Home/archive-book.svg"
                       alt="img"
-                      className="w-1/2 h-1/2 object-cover object-center"
+                      className="card-icon w-1/2 h-1/2 object-cover object-center"
                     />
                   </div>
                 </div>
@@ -256,8 +252,8 @@ export default function WhyChooseIndosol() {
                   </h3>
 
                   <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex">
-                    Providing COA, MSDS, GMP, and complete import
-                    clearance documentation.
+                    Providing COA, MSDS, GMP, and complete import clearance
+                    documentation.
                   </span>
                 </div>
               </div>
@@ -275,7 +271,7 @@ export default function WhyChooseIndosol() {
                   <img
                     src="/images/Home/wifi-square.svg"
                     alt="img"
-                    className="w-1/2 h-1/2 object-cover object-center"
+                    className="card-icon w-1/2 h-1/2 object-cover object-center"
                   />
                 </div>
 
@@ -295,7 +291,7 @@ export default function WhyChooseIndosol() {
                     <img
                       src="/images/Home/archive-book.svg"
                       alt="img"
-                      className="w-1/2 h-1/2 object-cover object-center"
+                      className="card-icon w-1/2 h-1/2 object-cover object-center"
                     />
                   </div>
                 </div>
@@ -306,8 +302,8 @@ export default function WhyChooseIndosol() {
                   </h3>
 
                   <span className="text-[1rem] leading-[1.6rem] text-[#6b7280] mt-2 flex">
-                    Manufacturer partnerships guarantee pharma-level
-                    quality at optimal pricing.
+                    Manufacturer partnerships guarantee pharma-level quality at
+                    optimal pricing.
                   </span>
                 </div>
               </div>
@@ -322,13 +318,11 @@ export default function WhyChooseIndosol() {
                   <img
                     src="/images/Home/global-search.svg"
                     alt="img"
-                    className="w-1/2 h-1/2 object-cover object-center"
+                    className="card-icon w-1/2 h-1/2 object-cover object-center"
                   />
                 </div>
 
-                <h3 className="font-medium text-[#111827]">
-                  Global Reach
-                </h3>
+                <h3 className="font-medium text-[#111827]">Global Reach</h3>
               </div>
             </div>
           </div>

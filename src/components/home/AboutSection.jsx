@@ -19,8 +19,7 @@ export default function AboutSection() {
       // ─────────────────────────────────────────────
       // TEXT SCROLL COLOR ANIMATION
       // ─────────────────────────────────────────────
-      const words =
-        headingRef.current.querySelectorAll(".heading-word");
+      const words = headingRef.current.querySelectorAll(".heading-word");
 
       gsap.fromTo(
         words,
@@ -32,11 +31,8 @@ export default function AboutSection() {
         {
           opacity: 1,
           y: 0,
-
           color: (i, target) =>
-            target.classList.contains("blue-word")
-              ? "#0D40A2"
-              : "#6B7280",
+            target.classList.contains("blue-word") ? "#0D40A2" : "#6B7280",
 
           stagger: 0.06,
           ease: "power3.out",
@@ -51,13 +47,9 @@ export default function AboutSection() {
       );
 
       // ─────────────────────────────────────────────
-      // CARDS ANIMATION
+      // CARDS ENTRANCE ANIMATION
       // ─────────────────────────────────────────────
-      const cards = [
-        card1Ref.current,
-        card2Ref.current,
-        card3Ref.current,
-      ];
+      const cards = [card1Ref.current, card2Ref.current, card3Ref.current];
 
       gsap.fromTo(
         cards,
@@ -81,6 +73,50 @@ export default function AboutSection() {
           },
         },
       );
+
+      // ─────────────────────────────────────────────
+      // CARD HOVER EFFECT
+      // ─────────────────────────────────────────────
+      cards.forEach((card) => {
+        const icon = card.querySelector(".card-icon");
+
+        const handleEnter = () => {
+          gsap.to(card, {
+            boxShadow:
+              "0 24px 48px rgba(29,78,216,0.12), 0 4px 12px rgba(0,0,0,0.06)",
+            borderColor: "rgba(29,78,216,0.25)",
+            duration: 0.35,
+            ease: "power2.out",
+          });
+
+          gsap.to(icon, {
+            rotation: 25,
+            scale: 1.1,
+            duration: 0.4,
+            ease: "power2.out",
+            transformOrigin: "center center",
+          });
+        };
+
+        const handleLeave = () => {
+          gsap.to(card, {
+            boxShadow: "0 0 0 rgba(0,0,0,0)",
+            borderColor: "#ececec",
+            duration: 0.2,
+            ease: "none",
+          });
+
+          gsap.to(icon, {
+            rotation: 0,
+            scale: 1,
+            duration: 0.4,
+            ease: "power2.out",
+          });
+        };
+
+        card.addEventListener("mouseenter", handleEnter);
+        card.addEventListener("mouseleave", handleLeave);
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -96,10 +132,7 @@ export default function AboutSection() {
         {/* TOP CONTENT */}
         {/* ───────────────────────────── */}
         <div className="w-full flex justify-center">
-          <div
-            ref={headingRef}
-            className="w-full max-w-[52rem] text-center"
-          >
+          <div ref={headingRef} className="w-full max-w-[52rem] text-center">
             <h2 className="flex flex-wrap justify-center gap-x-2 font-light">
               {[
                 "Indosol",
@@ -170,72 +203,84 @@ export default function AboutSection() {
           {/* CARD 1 */}
           <div
             ref={card1Ref}
-            className="group bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] shadow-sm cursor-pointer transition-all duration-300 hover:bg-[#0D40A2]"
-            style={{ opacity: 0, willChange: "transform" }}
+            className="bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] cursor-pointer"
+            style={{
+              opacity: 0,
+              willChange: "transform",
+              boxShadow: "0 0 0 rgba(0,0,0,0)",
+            }}
           >
             <div className="w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-white rounded-md">
               <img
                 src="/images/Home/HandStar.png"
                 alt="img"
-                className="w-full h-full object-cover object-center"
+                className="card-icon w-full h-full object-cover object-center"
               />
             </div>
 
-            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem] transition-colors duration-300 group-hover:text-white">
+            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
               20+ Years Experience
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem] transition-colors duration-300 group-hover:text-white">
-              Extensive experience exceeding twenty years in global commerce
-              and acquiring high-quality healthcare items.
+            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+              Extensive experience exceeding twenty years in global commerce and
+              acquiring high-quality healthcare items.
             </p>
           </div>
 
           {/* CARD 2 */}
           <div
             ref={card2Ref}
-            className="group bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] shadow-sm cursor-pointer transition-all duration-300 hover:bg-[#0D40A2]"
-            style={{ opacity: 0, willChange: "transform" }}
+            className="bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] cursor-pointer"
+            style={{
+              opacity: 0,
+              willChange: "transform",
+              boxShadow: "0 0 0 rgba(0,0,0,0)",
+            }}
           >
             <div className="w-[3rem] h-[3rem] flex items-center p-1 justify-center bg-white rounded-md">
               <img
                 src="/images/Home/Verify.png"
                 alt="img"
-                className="w-full h-full object-cover object-center"
+                className="card-icon w-full h-full object-cover object-center"
               />
             </div>
 
-            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem] transition-colors duration-300 group-hover:text-white">
+            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
               Global Export Network
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem] transition-colors duration-300 group-hover:text-white">
-              Providing services to governed and partly governed markets
-              in Asia, Africa, the Middle East, and additional regions.
+            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+              Providing services to governed and partly governed markets in
+              Asia, Africa, the Middle East, and additional regions.
             </p>
           </div>
 
           {/* CARD 3 */}
           <div
             ref={card3Ref}
-            className="group bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] shadow-sm cursor-pointer transition-all duration-300 hover:bg-[#0D40A2]"
-            style={{ opacity: 0, willChange: "transform" }}
+            className="bg-white rounded-[1.2rem] p-[2.2rem] border border-[#ececec] cursor-pointer"
+            style={{
+              opacity: 0,
+              willChange: "transform",
+              boxShadow: "0 0 0 rgba(0,0,0,0)",
+            }}
           >
             <div className="w-[3rem] h-[3rem] flex items-center p-1 justify-center bg-white rounded-md">
               <img
                 src="/images/Home/Verify.png"
                 alt="img"
-                className="w-full h-full object-cover object-center"
+                className="card-icon w-full h-full object-cover object-center"
               />
             </div>
 
-            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem] transition-colors duration-300 group-hover:text-white">
+            <h3 className="ttext-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
               Quality Certified
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem] transition-colors duration-300 group-hover:text-white">
-              Products are sourced exclusively from approved manufacturers
-              that meet compliance and global pharma regulatory standards.
+            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+              Products are sourced exclusively from approved manufacturers that
+              meet compliance and global pharma regulatory standards.
             </p>
           </div>
         </div>

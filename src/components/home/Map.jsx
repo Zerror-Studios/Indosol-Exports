@@ -16,7 +16,7 @@ const Map = () => {
       transformStyle: "preserve-3d",
       opacity: 0,
       scale: 0.8,
-      rotationZ: -8,
+      // rotationZ: -8,
       filter: "blur(10px)",
     });
 
@@ -24,7 +24,7 @@ const Map = () => {
     gsap.set(headings[0], {
       opacity: 1,
       scale: 1,
-      rotationZ: 0,
+      // rotationZ: 0,
       filter: "blur(0px)",
     });
 
@@ -43,8 +43,8 @@ const Map = () => {
     tl.to(headings[0], {
       opacity: 0,
       scale: 2,
-      // rotationX: -20,
-      rotationZ: 8,
+      translateY: "-100%",
+      // rotationZ: 8,
       filter: "blur(12px)",
       duration: 1,
     });
@@ -55,7 +55,7 @@ const Map = () => {
       {
         opacity: 1,
         scale: 1,
-        rotationZ: 0,
+        // rotationZ: 0,
         filter: "blur(0px)",
         duration: 1,
       },
@@ -69,7 +69,8 @@ const Map = () => {
       opacity: 0,
       scale: 2,
       // rotationX: -20,
-      rotationZ:8,
+      // rotationZ:8,
+       translateY: "-100%",
       filter: "blur(12px)",
       duration: 1,
     });
@@ -93,8 +94,9 @@ const Map = () => {
     tl.to(headings[2], {
       opacity: 0,
       scale: 2,
-      // rotationX: -20,
-      rotationZ: 8,
+      rotationY: -20,
+      // rotationZ: 8,
+       translateY: "-100%",
       filter: "blur(12px)",
       duration: 1,
     });

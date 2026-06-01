@@ -64,7 +64,7 @@ export default function ProjectHome() {
   return (
     <section
       ref={sectionRef}
-      className="w-full h-screen relative overflow-hidden"
+      className="w-full h-[85svh] relative overflow-hidden"
     >
       {/* Background Image */}
       {/* <img
