@@ -352,21 +352,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-  { name: "Home",     path: "/",         icon: FiHome },
-  { name: "About Us", path: "/about",    icon: FiInfo },
+  { name: "Home", path: "/", icon: FiHome },
+  { name: "About Us", path: "/about", icon: FiInfo },
   { name: "Products", path: "/products", icon: FiPackage },
-  { name: "Imports",  path: "/imports",  icon: FiDownload },
-  { name: "Exports",  path: "/exports",  icon: FiUpload },
+  { name: "Imports", path: "/imports", icon: FiDownload },
+  { name: "Exports", path: "/exports", icon: FiUpload },
 ];
 
 export default function Header() {
-  const headerRef  = useRef(null);
-  const buttonRef  = useRef(null);
-  const circleRef  = useRef(null);
-  const sheetRef   = useRef(null);
+  const headerRef = useRef(null);
+  const buttonRef = useRef(null);
+  const circleRef = useRef(null);
+  const sheetRef = useRef(null);
   const overlayRef = useRef(null);
-  const linkRefs   = useRef([]);
-  const ctaBtnRef  = useRef(null);
+  const linkRefs = useRef([]);
+  const ctaBtnRef = useRef(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const pathName = usePathname();
@@ -376,16 +376,42 @@ export default function Header() {
     const header = headerRef.current;
     const handleScroll = () => {
       if (window.scrollY > 30) {
-        gsap.to(header, { backgroundColor: "#ffffff", duration: 0.3, ease: "power2.out", boxShadow: "0 2px 20px rgba(0,0,0,0.06)" });
-        gsap.to(".navLink",    { color: "#111827", duration: 0.3 });
-        gsap.to(".NavBTBN",    { backgroundColor: "#0D40A2", color: "#ffffff", duration: 0.3 });
-        gsap.to(".BTNinnerCrl",{ backgroundColor: "#ffffff", color: "#0D40A2", duration: 0.3 });
+        gsap.to(header, {
+          backgroundColor: "#ffffff",
+          duration: 0.3,
+          ease: "power2.out",
+          boxShadow: "0 2px 20px rgba(0,0,0,0.06)",
+        });
+        gsap.to(".navLink", { color: "#111827", duration: 0.3 });
+        gsap.to(".NavBTBN", {
+          backgroundColor: "#0D40A2",
+          color: "#ffffff",
+          duration: 0.3,
+        });
+        gsap.to(".BTNinnerCrl", {
+          backgroundColor: "#ffffff",
+          color: "#0D40A2",
+          duration: 0.3,
+        });
         gsap.to(".mobileIcon", { color: "#111827", duration: 0.3 });
       } else {
-        gsap.to(header, { backgroundColor: "transparent", duration: 0.3, ease: "power2.out", boxShadow: "0 0 0 rgba(0,0,0,0)" });
-        gsap.to(".navLink",    { color: "#ffffff", duration: 0.3 });
-        gsap.to(".NavBTBN",    { backgroundColor: "#ffffff", color: "#0D40A2", duration: 0.3 });
-        gsap.to(".BTNinnerCrl",{ backgroundColor: "#0D40A2", color: "#ffffff", duration: 0.3 });
+        gsap.to(header, {
+          backgroundColor: "transparent",
+          duration: 0.3,
+          ease: "power2.out",
+          boxShadow: "0 0 0 rgba(0,0,0,0)",
+        });
+        gsap.to(".navLink", { color: "#ffffff", duration: 0.3 });
+        gsap.to(".NavBTBN", {
+          backgroundColor: "#ffffff",
+          color: "#0D40A2",
+          duration: 0.3,
+        });
+        gsap.to(".BTNinnerCrl", {
+          backgroundColor: "#0D40A2",
+          color: "#ffffff",
+          duration: 0.3,
+        });
         gsap.to(".mobileIcon", { color: "#ffffff", duration: 0.3 });
       }
     };
@@ -399,19 +425,28 @@ export default function Header() {
     const button = buttonRef.current;
     const circle = circleRef.current;
     if (!button || !circle) return;
-    const enter = () => { gsap.to(button, { scale: 1.03, duration: 0.3, ease: "power2.out" }); gsap.to(circle, { rotate: 45, duration: 0.4, ease: "power3.out" }); };
-    const leave = () => { gsap.to(button, { scale: 1,    duration: 0.3, ease: "power2.out" }); gsap.to(circle, { rotate: 0,  duration: 0.4, ease: "power3.out" }); };
+    const enter = () => {
+      gsap.to(button, { scale: 1.03, duration: 0.3, ease: "power2.out" });
+      gsap.to(circle, { rotate: 45, duration: 0.4, ease: "power3.out" });
+    };
+    const leave = () => {
+      gsap.to(button, { scale: 1, duration: 0.3, ease: "power2.out" });
+      gsap.to(circle, { rotate: 0, duration: 0.4, ease: "power3.out" });
+    };
     button.addEventListener("mouseenter", enter);
     button.addEventListener("mouseleave", leave);
-    return () => { button.removeEventListener("mouseenter", enter); button.removeEventListener("mouseleave", leave); };
+    return () => {
+      button.removeEventListener("mouseenter", enter);
+      button.removeEventListener("mouseleave", leave);
+    };
   }, []);
 
   // ── TOP SHEET ANIMATION ───────────────────────────────
   useEffect(() => {
-    const sheet   = sheetRef.current;
+    const sheet = sheetRef.current;
     const overlay = overlayRef.current;
-    const links   = linkRefs.current.filter(Boolean);
-    const cta     = ctaBtnRef.current;
+    const links = linkRefs.current.filter(Boolean);
+    const cta = ctaBtnRef.current;
 
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -421,48 +456,81 @@ export default function Header() {
       gsap.to(overlay, { opacity: 1, duration: 0.35, ease: "power2.out" });
 
       // Sheet drops down from top
-      gsap.fromTo(sheet,
+      gsap.fromTo(
+        sheet,
         { y: "-100%", opacity: 0.6 },
-        { y: "0%", opacity: 1, duration: 0.5, ease: "power4.out" }
+        { y: "0%", opacity: 1, duration: 0.5, ease: "power4.out" },
       );
 
       // Nav tiles stagger down
-      gsap.fromTo(links,
+      gsap.fromTo(
+        links,
         { y: -20, opacity: 0, scale: 0.95 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: "power3.out", stagger: 0.06, delay: 0.2 }
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "power3.out",
+          stagger: 0.06,
+          delay: 0.2,
+        },
       );
 
       // CTA slides in last
-      gsap.fromTo(cta,
+      gsap.fromTo(
+        cta,
         { y: -16, opacity: 0, scale: 0.92 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2)", delay: 0.52 }
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.45,
+          ease: "back.out(2)",
+          delay: 0.52,
+        },
       );
-
     } else {
       document.body.style.overflow = "";
 
       // Links fade out upward
-      gsap.to(links, { y: -12, opacity: 0, scale: 0.96, duration: 0.2, ease: "power2.in", stagger: 0.025 });
-      gsap.to(cta,   { y: -10, opacity: 0, duration: 0.18, ease: "power2.in" });
+      gsap.to(links, {
+        y: -12,
+        opacity: 0,
+        scale: 0.96,
+        duration: 0.2,
+        ease: "power2.in",
+        stagger: 0.025,
+      });
+      gsap.to(cta, { y: -10, opacity: 0, duration: 0.18, ease: "power2.in" });
 
       // Sheet slides back up
-      gsap.to(sheet, { y: "-100%", opacity: 0.4, duration: 0.45, ease: "power3.inOut", delay: 0.08 });
+      gsap.to(sheet, {
+        y: "-100%",
+        opacity: 0.4,
+        duration: 0.45,
+        ease: "power3.inOut",
+        delay: 0.08,
+      });
 
       // Overlay fade out
       gsap.to(overlay, {
-        opacity: 0, duration: 0.35, ease: "power2.in", delay: 0.1,
+        opacity: 0,
+        duration: 0.35,
+        ease: "power2.in",
+        delay: 0.1,
         onComplete: () => gsap.set(overlay, { display: "none" }),
       });
     }
   }, [menuOpen]);
 
-  const openMenu  = () => setMenuOpen(true);
+  const openMenu = () => setMenuOpen(true);
   const closeMenu = () => setMenuOpen(false);
 
   // ── CONTACT PAGE COLOR ────────────────────────────────
   useLayoutEffect(() => {
     if (pathName === "/contact") {
-      gsap.set(".txt",        { color: "#0D40A2" });
+      gsap.set(".txt", { color: "#0D40A2" });
       gsap.set(".mobileIcon", { color: "#0D40A2" });
     }
   }, [pathName]);
@@ -473,36 +541,40 @@ export default function Header() {
       <header
         ref={headerRef}
         className="fixed top-0 left-0 z-[999] w-full transition-all duration-300"
+        
       >
         <div className="w-[92vw] max-w-[90rem] mx-auto h-[5rem] md:h-[5.5rem] flex items-center justify-between">
-
           {/* Logo */}
           <Link href="/">
-            <img src="/icons/logo.png" alt="Indosol Exports" className="w-[7rem] md:w-[8rem] object-contain" />
+            <img
+              src="/icons/logo.png"
+              alt="Indosol Exports"
+              className="w-[7rem] md:w-[8rem] object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
-         {/* Desktop Nav */}
-<nav className="hidden lg:flex items-center gap-[2.5rem]">
-  {NAV_LINKS.map((item, i) => {
-    const isActive = pathName === item.path;
-    return (
-      <Link
-        key={i}
-        href={item.path}
-        className={`navLink group relative text-[1rem] xl:text-[1.05rem] txt font-medium text-white`}
-      >
-        {item.name}
-        {/* Active underline — always visible on active page */}
-        <span
-          className={`absolute left-0 -bottom-1 h-[2px] bg-current transition-all duration-300 ${
-            isActive ? "w-full" : "w-0 group-hover:w-full"
-          }`}
-        />
-      </Link>
-    );
-  })}
-</nav>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-[2.5rem]">
+            {NAV_LINKS.map((item, i) => {
+              const isActive = pathName === item.path;
+              return (
+                <Link
+                  key={i}
+                  href={item.path}
+                  className={`navLink group relative text-[1rem] xl:text-[1.05rem] txt font-medium text-white`}
+                >
+                  {item.name}
+                  {/* Active underline — always visible on active page */}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-current transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
+          </nav>
 
           {/* Right side */}
           <div className="flex items-center gap-4">
@@ -572,7 +644,7 @@ export default function Header() {
         {/* Nav link tiles */}
         <div className="flex flex-col px-4 gap-1 max-sm:py-[5vh]">
           {NAV_LINKS.map((item, i) => {
-            const Icon     = item.icon;
+            const Icon = item.icon;
             const isActive = pathName === item.path;
             return (
               <Link
@@ -587,14 +659,18 @@ export default function Header() {
                 {/* Icon badge */}
                 <div
                   className={`w-10 h-10 rounded-[0.7rem] flex items-center justify-center text-[1.05rem] flex-shrink-0 ${
-                    isActive ? "bg-[#DBEAFE] text-[#1D4ED8]" : "bg-[#f3f4f6] text-[#6b7280]"
+                    isActive
+                      ? "bg-[#DBEAFE] text-[#1D4ED8]"
+                      : "bg-[#f3f4f6] text-[#6b7280]"
                   }`}
                 >
                   <Icon />
                 </div>
 
                 {/* Label */}
-                <span className={`flex-1 text-[1rem] font-medium ${isActive ? "text-[#111827]" : "text-[#374151]"}`}>
+                <span
+                  className={`flex-1 text-[1rem] font-medium ${isActive ? "text-[#111827]" : "text-[#374151]"}`}
+                >
                   {item.name}
                 </span>
 

@@ -168,9 +168,15 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full will-change-transform overflow-hidden"
       >
 
-        <video src={`/random_video/5.mp4`} loop muted autoPlay 
+        <video src={`/random_video/ah1.mp4`} loop muted autoPlay 
          className="w-full h-full object-cover object-center"
         ></video>
+
+          {/* Overlay */}
+      <div
+        ref={overlayRef}
+        className="absolute inset-0 bg-black/40"
+      />
         {/* <Image
           src="/images/Home/HomeHeroImgBG.webp"
           alt="Molecular structure background"
@@ -180,15 +186,17 @@ export default function Hero() {
         /> */}
       </div>
 
+
+
       {/* Overlay — separate ref so it parallaxes at a different depth */}
-      <div
+      {/* <div
         ref={overlayRef}
         className="absolute inset-0 will-change-transform"
         style={{
           background:
             "linear-gradient(to right, rgba(5,18,50,0.92) 0%, rgba(5,18,50,0.60) 45%, rgba(5,18,50,0.15) 100%)",
         }}
-      />
+      /> */}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col w-full justify-center h-full pl-[5vw] pr-[5vw] pt-[7vw] pb-[7vw]">

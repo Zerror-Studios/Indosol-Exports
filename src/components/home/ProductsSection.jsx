@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +33,7 @@ export default function ProductsSection() {
         "Paracetamol BP",
         "Albendazole USP",
       ],
-      image: "/random_video/4.mp4",
+      image: "/random_video/ah1.mp4",
     },
     {
       title: "Excipients",
@@ -46,7 +47,7 @@ export default function ProductsSection() {
         "Liquid Glucose",
         "Sodium Starch Glycolate",
       ],
-      image: "/random_video/3.mp4",
+      image: "/random_video/ap1.mp4",
     },
     {
       title: "Packaging Material",
@@ -59,7 +60,7 @@ export default function ProductsSection() {
         "Plastic spoons / droppers",
         "PVC",
       ],
-      image: "/random_video/5.mp4",
+      image: "/random_video/ab1.mp4",
     },
   ];
 
@@ -164,6 +165,7 @@ export default function ProductsSection() {
             Products We <br /> Provide
           </h1>
 
+          <Link href={`/products`} >
           <button
             ref={btnRef}
             className="border border-white/20 rounded-full px-[1rem] py-[0.5rem] flex items-center gap-[0.8rem] text-white text-[1.4rem] duration-300 hover:bg-white hover:text-[#06256F]"
@@ -174,6 +176,7 @@ export default function ProductsSection() {
               <FaArrowRight/>
             </span>
           </button>
+          </Link>
         </div>
 
         {/* Product Items */}

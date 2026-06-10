@@ -77,40 +77,117 @@ export default function AboutSection() {
       // ─────────────────────────────────────────────
       // CARD HOVER EFFECT
       // ─────────────────────────────────────────────
+      // cards.forEach((card) => {
+      //   const icon = card.querySelector(".card-icon");
+
+      //   const handleEnter = () => {
+      //     gsap.to(card, {
+      //       boxShadow:
+      //         "0 24px 48px rgba(29,78,216,0.12), 0 4px 12px rgba(0,0,0,0.06)",
+      //       borderColor: "rgba(29,78,216,0.25)",
+      //       duration: 0.35,
+      //       ease: "power2.out",
+      //     });
+
+      //     gsap.to(icon, {
+      //       rotation: 25,
+      //       scale: 1.1,
+      //       duration: 0.4,
+      //       ease: "power2.out",
+      //       transformOrigin: "center center",
+      //     });
+      //   };
+
+      //   const handleLeave = () => {
+      //     gsap.to(card, {
+      //       boxShadow: "0 0 0 rgba(0,0,0,0)",
+      //       borderColor: "#ececec",
+      //       duration: 0.2,
+      //       ease: "none",
+      //     });
+
+      //     gsap.to(icon, {
+      //       rotation: 0,
+      //       scale: 1,
+      //       duration: 0.4,
+      //       ease: "power2.out",
+      //     });
+      //   };
+
+      //   card.addEventListener("mouseenter", handleEnter);
+      //   card.addEventListener("mouseleave", handleLeave);
+      // });
+
+      // ─────────────────────────────────────────────
+      // CARD HOVER EFFECT
+      // ─────────────────────────────────────────────
       cards.forEach((card) => {
+        const iconWrapper = card.querySelector(".icon-wrapper");
         const icon = card.querySelector(".card-icon");
+        const title = card.querySelector(".card-title");
+        const desc = card.querySelector(".card-desc");
 
         const handleEnter = () => {
           gsap.to(card, {
-            boxShadow:
-              "0 24px 48px rgba(29,78,216,0.12), 0 4px 12px rgba(0,0,0,0.06)",
-            borderColor: "rgba(29,78,216,0.25)",
-            duration: 0.35,
+            backgroundColor: "#0D40A2",
+            borderColor: "#0D40A2",
+            duration: 0.45,
+            ease: "power2.out",
+          });
+
+          gsap.to(iconWrapper, {
+            backgroundColor: "#f5f5f5",
+            duration: 0.45,
             ease: "power2.out",
           });
 
           gsap.to(icon, {
             rotation: 25,
             scale: 1.1,
-            duration: 0.4,
+            duration: 0.45,
             ease: "power2.out",
             transformOrigin: "center center",
+          });
+
+          gsap.to(title, {
+            color: "#ffffff",
+            duration: 0.35,
+          });
+
+          gsap.to(desc, {
+            color: "#dbe4ff",
+            duration: 0.35,
           });
         };
 
         const handleLeave = () => {
           gsap.to(card, {
-            boxShadow: "0 0 0 rgba(0,0,0,0)",
+            backgroundColor: "#ffffff",
             borderColor: "#ececec",
-            duration: 0.2,
-            ease: "none",
+            duration: 0.35,
+            ease: "power2.out",
+          });
+
+          gsap.to(iconWrapper, {
+            backgroundColor: "#ffffff",
+            duration: 0.35,
           });
 
           gsap.to(icon, {
             rotation: 0,
             scale: 1,
-            duration: 0.4,
+            duration: 0.35,
             ease: "power2.out",
+          });
+
+          gsap.to(title, {
+            color: "#0D40A2",
+            duration: 0.25,
+          });
+
+          gsap.to(desc, {
+            color: "#6B7280",
+            duration: 0.25,
           });
         };
 
@@ -210,7 +287,7 @@ export default function AboutSection() {
               boxShadow: "0 0 0 rgba(0,0,0,0)",
             }}
           >
-            <div className="w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-white rounded-md">
+            <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
               <img
                 src="/images/Home/HandStar.png"
                 alt="img"
@@ -218,11 +295,11 @@ export default function AboutSection() {
               />
             </div>
 
-            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
-              20+ Years Experience
+           <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
+              25+ Years Experience
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+            <p className="card-desc text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
               Extensive experience exceeding twenty years in global commerce and
               acquiring high-quality healthcare items.
             </p>
@@ -238,7 +315,7 @@ export default function AboutSection() {
               boxShadow: "0 0 0 rgba(0,0,0,0)",
             }}
           >
-            <div className="w-[3rem] h-[3rem] flex items-center p-1 justify-center bg-white rounded-md">
+            <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
               <img
                 src="/images/Home/Verify.png"
                 alt="img"
@@ -246,11 +323,11 @@ export default function AboutSection() {
               />
             </div>
 
-            <h3 className="text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
+            <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
               Global Export Network
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+            <p className="card-desc text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
               Providing services to governed and partly governed markets in
               Asia, Africa, the Middle East, and additional regions.
             </p>
@@ -266,7 +343,7 @@ export default function AboutSection() {
               boxShadow: "0 0 0 rgba(0,0,0,0)",
             }}
           >
-            <div className="w-[3rem] h-[3rem] flex items-center p-1 justify-center bg-white rounded-md">
+            <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
               <img
                 src="/images/Home/Verify.png"
                 alt="img"
@@ -274,13 +351,12 @@ export default function AboutSection() {
               />
             </div>
 
-            <h3 className="ttext-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
+            <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
               Quality Certified
             </h3>
 
-            <p className="text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
-              Products are sourced exclusively from approved manufacturers that
-              meet compliance and global pharma regulatory standards.
+            <p className="card-desc text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
+              Products are sourced exclusively from WHO/GMP compliant manufacturers, supplied through us — an ISO certified, FSSAI approved, and 3-Star Export House recognised by the Government of India.
             </p>
           </div>
         </div>

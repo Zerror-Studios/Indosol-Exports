@@ -228,7 +228,7 @@ export default function ProjectLast() {
               {/* image itself */}
               <div ref={imageRef} style={{ width: "100%", height: "100%" }}>
                 <Image
-                  src="/images/export/rc1.webp"
+                  src="/images/pp1.jpeg"
                   alt="Regulatory Compliance"
                   fill
                   className="object-cover"

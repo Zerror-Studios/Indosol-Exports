@@ -45,6 +45,11 @@ export default function FAQSection() {
       answer:
         "Absolutely. We provide scalable export solutions for both bulk shipments and customized client requirements.",
     },
+    {
+      question: "Who is JHNH and what is Indosol's relationship with them? (this will be the 2nd FAQ)",
+      answer:
+        "JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading China-based manufacturer of PVP-based pharmaceutical excipients. Effective 1 December 2025, Indosol Exports has been officially appointed as JHNH's Authorised Distributor in India — covering marketing, domestic inventory management, sale, and distribution of their products across the country. Through this partnership, Indosol supplies JHNH's complete excipient range including Povidone, Crospovidone, and Copovidone) directly to large and mid-sized pharmaceutical manufacturers across India.",
+    },
   ];
 
   // ── Accordion GSAP logic ─────────────────────────────────────────

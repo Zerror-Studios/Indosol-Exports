@@ -12,7 +12,7 @@ export default function StatsSection() {
 
   const statsData = [
     {
-      number: "20+",
+      number: "25+",
       title: "Our Experience",
       description:
         "Extensive experience exceeding twenty years in global commerce and acquiring high-quality healthcare items.",
@@ -27,7 +27,7 @@ export default function StatsSection() {
       number: "4",
       title: "Quality Certified",
       description:
-        "Products derive only from certified makers following compliance and international pharma regulatory standards.",
+        "Products are sourced exclusively from WHO/GMP compliant manufacturers, supplied through us — an ISO certified, FSSAI approved, and 3-Star Export House recognised by the Government of India.",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function StatsSection() {
                 <h1
                   data-count={numericPart}
                   data-suffix={suffixPart}
-                  className="text-[4.5rem] leading-[4.5rem] TextBlue"
+                  className="text-[4.5rem] leading-[4.5rem] TextBlue font-semibold"
                 >
                   0{suffixPart}
                 </h1>

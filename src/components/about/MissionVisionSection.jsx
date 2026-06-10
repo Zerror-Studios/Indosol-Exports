@@ -104,7 +104,7 @@ export default function MissionVisionSection() {
             {/* Left Image */}
             <div ref={missionImgRef} className="w-full overflow-hidden rounded-[1.2rem]">
               <img
-                src={`/images/about/M1.webp`}
+                src={`/images/about/mis1.jpg`}
                 alt="Mission"
                 className="w-full h-[26rem] object-cover"
               />
@@ -170,7 +170,7 @@ export default function MissionVisionSection() {
               className="w-full overflow-hidden rounded-[1.2rem] order-1 lg:order-2"
             >
               <img
-                src={`/images/about/M2.webp`}
+                src={`/images/about/mis2.jpeg`}
                 alt="Vision"
                 className="w-full h-[26rem] object-cover"
               />
