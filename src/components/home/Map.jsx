@@ -6,130 +6,210 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Map = () => {
+  // useEffect(() => {
+  //   const headings = gsap.utils.toArray(".heading");
+
+  //   // Initial state
+  //   gsap.set(headings, {
+  //     transformPerspective: 1000,
+  //     transformOrigin: "center center",
+  //     transformStyle: "preserve-3d",
+  //     opacity: 0,
+  //     scale: 0.8,
+  //     // rotationZ: -8,
+  //     filter: "blur(10px)",
+  //   });
+
+  //   // First heading visible initially
+  //   gsap.set(headings[0], {
+  //     opacity: 1,
+  //     scale: 1,
+  //     // rotationZ: 0,
+  //     filter: "blur(0px)",
+  //   });
+
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".MapTopMainCont",
+  //       start: "top top",
+  //       end: "bottom bottom",
+  //       scrub: 1.5,
+  //     },
+  //   });
+
+  //   // =========================
+  //   // First Heading OUT
+  //   // =========================
+  //   tl.to(headings[0], {
+  //     opacity: 0,
+  //     scale: 2,
+  //     translateY: "-100%",
+  //     // rotationZ: 8,
+  //     filter: "blur(12px)",
+  //     duration: 1,
+  //   });
+
+  //   // Second Heading IN
+  //   tl.to(
+  //     headings[1],
+  //     {
+  //       opacity: 1,
+  //       scale: 1,
+  //       // rotationZ: 0,
+  //       filter: "blur(0px)",
+  //       duration: 1,
+  //     },
+  //     "<",
+  //   );
+
+  //   // =========================
+  //   // Second Heading OUT
+  //   // =========================
+  //   tl.to(headings[1], {
+  //     opacity: 0,
+  //     scale: 2,
+  //     // rotationX: -20,
+  //     // rotationZ:8,
+  //      translateY: "-100%",
+  //     filter: "blur(12px)",
+  //     duration: 1,
+  //   });
+
+  //   // Third Heading IN
+  //   tl.to(
+  //     headings[2],
+  //     {
+  //       opacity: 1,
+  //       scale: 1,
+  //       rotationZ: 0,
+  //       filter: "blur(0px)",
+  //       duration: 1,
+  //     },
+  //     "<",
+  //   );
+
+  //   // =========================
+  //   // Third Heading OUT
+  //   // =========================
+  //   tl.to(headings[2], {
+  //     opacity: 0,
+  //     scale: 2,
+  //     rotationY: -20,
+  //     // rotationZ: 8,
+  //      translateY: "-100%",
+  //     filter: "blur(12px)",
+  //     duration: 1,
+  //   });
+  //   tl.from('.MapIcon',{
+  //     opacity:0,
+  //     top:'20%'
+  //   })
+
+  //   return () => {
+  //     tl.kill();
+  //     ScrollTrigger.getAll().forEach((st) => st.kill());
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const headings = gsap.utils.toArray(".heading");
+  const headings = gsap.utils.toArray(".heading");
 
-    // Initial state
-    gsap.set(headings, {
-      transformPerspective: 1000,
-      transformOrigin: "center center",
-      transformStyle: "preserve-3d",
-      opacity: 0,
-      scale: 0.8,
-      // rotationZ: -8,
-      filter: "blur(10px)",
-    });
+  // Initial state
+  gsap.set(headings, {
+    opacity: 0,
+    scale: 0.8,
+    filter: "blur(10px)",
+    y: 0,
+  });
 
-    // First heading visible initially
-    gsap.set(headings[0], {
-      opacity: 1,
-      scale: 1,
-      // rotationZ: 0,
-      filter: "blur(0px)",
-    });
+  // Show first text initially
+  gsap.set(headings[0], {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+  });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".MapTopMainCont",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1.5,
-      },
-    });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".MapTopMainCont",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1.5,
+    },
+  });
 
-    // =========================
-    // First Heading OUT
-    // =========================
-    tl.to(headings[0], {
-      opacity: 0,
-      scale: 2,
-      translateY: "-100%",
-      // rotationZ: 8,
-      filter: "blur(12px)",
-      duration: 1,
-    });
-
-    // Second Heading IN
-    tl.to(
-      headings[1],
-      {
-        opacity: 1,
-        scale: 1,
-        // rotationZ: 0,
-        filter: "blur(0px)",
+  // Animate all headings
+  headings.forEach((heading, index) => {
+    if (index !== headings.length - 1) {
+      // Current heading OUT
+      tl.to(heading, {
+        opacity: 0,
+        scale: 2,
+        y: "-100%",
+        filter: "blur(12px)",
         duration: 1,
-      },
-      "<",
-    );
+      });
 
-    // =========================
-    // Second Heading OUT
-    // =========================
-    tl.to(headings[1], {
-      opacity: 0,
-      scale: 2,
-      // rotationX: -20,
-      // rotationZ:8,
-       translateY: "-100%",
-      filter: "blur(12px)",
-      duration: 1,
-    });
+      // Next heading IN
+      tl.to(
+        headings[index + 1],
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 1,
+        },
+        "<"
+      );
+    }
+  });
 
-    // Third Heading IN
-    tl.to(
-      headings[2],
-      {
-        opacity: 1,
-        scale: 1,
-        rotationZ: 0,
-        filter: "blur(0px)",
-        duration: 1,
-      },
-      "<",
-    );
+  // Map icon animation after all text animations
+  tl.from(".MapIcon", {
+    opacity: 0,
+    top: "20%",
+    duration: 1,
+  });
 
-    // =========================
-    // Third Heading OUT
-    // =========================
-    tl.to(headings[2], {
-      opacity: 0,
-      scale: 2,
-      rotationY: -20,
-      // rotationZ: 8,
-       translateY: "-100%",
-      filter: "blur(12px)",
-      duration: 1,
-    });
-    tl.from('.MapIcon',{
-      opacity:0,
-      top:'20%'
-    })
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
-  }, []);
-
+  return () => {
+    tl.kill();
+    ScrollTrigger.getAll().forEach((st) => st.kill());
+  };
+}, []);
   return (
     <div className="MapTopMainCont relative h-[400svh] w-full bg-white">
       <div className="sticky top-0 left-0 h-screen w-full">
         {/* Text */}
         <div className="absolute top-[8%] left-0 z-20 flex w-full items-center justify-center capitalize">
-          <div className="relative flex h-[30vh] w-full items-center justify-center">
-            <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-              Serving clients <br className="sm:hidden" /> across
-            </h1>
+  <div className="relative flex h-[30vh] w-full items-center justify-center">
 
-            <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-              Asia, Europe, <br className="sm:hidden" /> Middle East,
-            </h1>
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      Africa
+    </h1>
 
-            <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-              and beyond
-            </h1>
-          </div>
-        </div>
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      Asia
+    </h1>
+
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      Middle East
+    </h1>
+
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      Europe
+    </h1>
+
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      South America
+    </h1>
+
+    <h1 className="heading TextDarkGray absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+      Southeast Asia
+    </h1>
+
+  </div>
+</div>
 
         {/* Map */}
         <div className="absolute bottom-0 left-0 z-[1] flex h-[70vh] w-full items-center justify-center pb-[5vh]">

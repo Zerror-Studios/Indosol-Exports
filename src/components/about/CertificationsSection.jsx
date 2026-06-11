@@ -279,8 +279,7 @@ export default function CertificationsSection() {
                   <Link
                     href={item.link}
                     target="_blank"
-  rel="noopener noreferrer"
-
+                    rel="noopener noreferrer"
                     className={`
       inline-flex 
       items-center 
@@ -297,7 +296,7 @@ export default function CertificationsSection() {
       mt-2
     `}
                   >
-                    See Certificate →
+                    See Certificate
                   </Link>
                 </div>
               </div>

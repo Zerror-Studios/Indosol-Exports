@@ -395,7 +395,7 @@ export default function LeadershipSection() {
                     transform: "translateY(20px)",
                   }}
                 >
-                  View Full Bio →
+                  View Full Bio
                 </button>
               </div>
 

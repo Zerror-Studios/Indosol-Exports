@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GrStatusGood } from "react-icons/gr";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { MdOutlineStarPurple500 } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +16,7 @@ export default function AboutSection() {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -288,11 +292,7 @@ export default function AboutSection() {
             }}
           >
             <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
-              <img
-                src="/images/Home/HandStar.png"
-                alt="img"
-                className="card-icon w-full h-full object-cover object-center"
-              />
+             <MdOutlineStarPurple500 className="text-[#ED3A1C] text-[1.5rem] " />
             </div>
 
            <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
@@ -316,11 +316,7 @@ export default function AboutSection() {
             }}
           >
             <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
-              <img
-                src="/images/Home/Verify.png"
-                alt="img"
-                className="card-icon w-full h-full object-cover object-center"
-              />
+              < AiOutlineGlobal className="text-[#ED3A1C] text-[1.5rem] " />
             </div>
 
             <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">
@@ -344,11 +340,7 @@ export default function AboutSection() {
             }}
           >
             <div className="icon-wrapper w-[3rem] h-[3rem] flex p-1 items-center justify-center bg-[#f3f3f3] rounded-md">
-              <img
-                src="/images/Home/Verify.png"
-                alt="img"
-                className="card-icon w-full h-full object-cover object-center"
-              />
+              <GrStatusGood   className="text-[#ED3A1C] text-[1.5rem] " />
             </div>
 
             <h3 className="card-title text-[1.8rem] font-semibold text-[#0D40A2] mt-[2rem]">

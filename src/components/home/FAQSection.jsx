@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,7 +47,8 @@ export default function FAQSection() {
         "Absolutely. We provide scalable export solutions for both bulk shipments and customized client requirements.",
     },
     {
-      question: "Who is JHNH and what is Indosol's relationship with them? (this will be the 2nd FAQ)",
+      question:
+        "Who is JHNH and what is Indosol's relationship with them? (this will be the 2nd FAQ)",
       answer:
         "JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading China-based manufacturer of PVP-based pharmaceutical excipients. Effective 1 December 2025, Indosol Exports has been officially appointed as JHNH's Authorised Distributor in India — covering marketing, domestic inventory management, sale, and distribution of their products across the country. Through this partnership, Indosol supplies JHNH's complete excipient range including Povidone, Crospovidone, and Copovidone) directly to large and mid-sized pharmaceutical manufacturers across India.",
     },
@@ -89,7 +91,7 @@ export default function FAQSection() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // Button rises up with slight delay
@@ -107,7 +109,7 @@ export default function FAQSection() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // FAQ rows stagger up one by one
@@ -124,9 +126,9 @@ export default function FAQSection() {
             trigger: faqRowRefs.current[0],
             start: "top 85%",
             toggleActions: "play none none none",
-            scrub:true
+            scrub: true,
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -143,10 +145,8 @@ export default function FAQSection() {
       className="w-full bg-[#ffffff] py-[6rem] overflow-hidden"
     >
       <div className="w-[90vw] mx-auto">
-
         {/* Top Header */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-[3rem] mb-[4rem]">
-
           <div ref={headingRef} style={{ opacity: 0 }}>
             <h1 className="text-[3.5rem] leading-[4rem] font-medium TextDarkGray">
               Frequently Asked
@@ -155,18 +155,21 @@ export default function FAQSection() {
             </h1>
           </div>
 
-          <button
-            ref={btnRef}
-            className="flex items-center gap-[1rem] border border-[#d9dce3] rounded-full bg-white py-[0.4rem] pl-[1rem] pr-[0.5rem] duration-300"
-            style={{ opacity: 0 }}
-          >
-            <span className="text-[1rem] TextDarkGray">
-              Get In Touch
-            </span>
-            <div className="w-[2rem] h-[2rem] rounded-full bg-[#1450d2] flex items-center justify-center text-white text-[0.9rem]">
-              <FaArrowRight/>
-            </div>
-          </button>
+          <Link href={`/contact`}>
+            <button
+              ref={btnRef}
+              className="flex items-center gap-[1rem] border border-[#d9dce3] rounded-full overflow-hidden bg-white py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
+              style={{ opacity: 0 }}
+            >
+              <span className="text-[1rem] TextDarkGray transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                Get In Touch
+              </span>
+
+              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full BgBlue flex items-center justify-center text-white text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100 group-hover:rotate-45">
+                <FaArrowRight />
+              </div>
+            </button>
+          </Link>
         </div>
 
         {/* FAQ Container */}
@@ -225,15 +228,12 @@ export default function FAQSection() {
                   ref={(el) => (innerRefs.current[index] = el)}
                   className="px-[2rem] pb-[2rem]"
                 >
-                  <p className=" TextLiteGray max-w-[55rem]">
-                    {item.answer}
-                  </p>
+                  <p className=" TextLiteGray max-w-[55rem]">{item.answer}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

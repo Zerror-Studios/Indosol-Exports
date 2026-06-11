@@ -166,17 +166,22 @@ export default function ProductsSection() {
           </h1>
 
           <Link href={`/products`} >
-          <button
-            ref={btnRef}
-            className="border border-white/20 rounded-full px-[1rem] py-[0.5rem] flex items-center gap-[0.8rem] text-white text-[1.4rem] duration-300 hover:bg-white hover:text-[#06256F]"
-            style={{ opacity: 0 }}
-          >
-            <p>Explore All Products</p>
-            <span className="w-[2rem] h-[2rem] rounded-full bg-white text-[#06256F] flex items-center justify-center text-[1rem]">
-              <FaArrowRight/>
-            </span>
-          </button>
+            <button
+              ref={btnRef}
+              className="flex items-center gap-[1rem] border border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
+              style={{ opacity: 0 }}
+            >
+              <span className="text-[1rem] text-white transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                Explore All Products
+              </span>
+
+              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full bg-white flex items-center justify-center TextBlue text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100 group-hover:rotate-45">
+                <FaArrowRight />
+              </div>
+            </button>
           </Link>
+          
+          
         </div>
 
         {/* Product Items */}
@@ -189,13 +194,13 @@ export default function ProductsSection() {
             >
               {/* Left Side */}
               <div
-                className="product-left w-full lg:w-[52%] flex flex-col justify-between"
+                className="product-left w-full lg:w-[52%] flex flex-col max-sm:mt-10 justify-between"
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div>
-                  <h3 className="text-white text-[2rem] md:text-[2.5rem] font-semibold">
+                  <h5 className="text-white text-[2rem] md:text-[2.5rem] ">
                     {item.title}
-                  </h3>
+                  </h5>
                   <p className="text-white/70 mt-2 max-w-[42rem]">
                     {item.description}
                   </p>

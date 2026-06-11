@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function ImportHero() {
   const sectionRef = useRef(null);
@@ -14,26 +16,25 @@ export default function ImportHero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-
       /* 1. BG scale-in */
       gsap.fromTo(
         imageRef.current,
         { scale: 1.1 },
-        { scale: 1, duration: 2, ease: "power3.out" }
+        { scale: 1, duration: 2, ease: "power3.out" },
       );
 
       /* 2. Overlay fade */
       gsap.fromTo(
         overlayRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 1.5, ease: "power2.out" }
+        { opacity: 1, duration: 1.5, ease: "power2.out" },
       );
 
       /* 3. Eyebrow slide + fade */
       gsap.fromTo(
         eyebrowRef.current,
         { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", delay: 0.5 }
+        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", delay: 0.5 },
       );
 
       /* 4. Heading lines clip-reveal */
@@ -46,16 +47,15 @@ export default function ImportHero() {
           ease: "power4.out",
           stagger: 0.13,
           delay: 0.7,
-        }
+        },
       );
 
       /* 5. Paragraph fade + rise */
       gsap.fromTo(
         paraRef.current,
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.85, ease: "power3.out", delay: 1.05 }
+        { opacity: 1, y: 0, duration: 0.85, ease: "power3.out", delay: 1.05 },
       );
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -73,20 +73,20 @@ export default function ImportHero() {
         alt="Export Banner"
         className="absolute inset-0 w-full h-full object-cover"
       /> */}
-      <video src={`/random_video/ai1.mp4`} loop muted autoPlay 
-         className="w-full h-full object-cover inset-0 top-0 left-0  absolute object-center"
-        ></video>
+      <video
+        src={`/random_video/ai1.mp4`}
+        loop
+        muted
+        autoPlay
+        className="w-full h-full object-cover inset-0 top-0 left-0  absolute object-center"
+      ></video>
 
       {/* Overlay */}
-      <div
-        ref={overlayRef}
-        className="absolute inset-0 bg-black/40"
-      />
+      <div ref={overlayRef} className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <div className="relative z-10 w-[90vw] max-w-[90rem] mx-auto h-full flex items-center">
         <div className="max-w-[52rem]">
-
           {/* Eyebrow */}
           <div
             ref={eyebrowRef}
@@ -111,13 +111,26 @@ export default function ImportHero() {
           </h1>
 
           {/* Description */}
-          <p
-            ref={paraRef}
-            className="text-white/90 mt-[2rem] max-w-[38rem]"
-          >
-           Reliable sourcing and import support for APIs, excipients, intermediates, and pharmaceutical raw materials from trusted global manufacturers.
+          <p ref={paraRef} className="text-white/90 mt-[2rem] max-w-[38rem]">
+            Reliable sourcing and import support for APIs, excipients,
+            intermediates, and pharmaceutical raw materials from trusted global
+            manufacturers.
           </p>
 
+          <Link href={`/certificates/JHNH Product Guide 2024 - INDOSOL_compressed.pdf`} target="blank">
+            <button
+              className="flex items-center gap-[1rem] mt-10 border border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
+              
+            >
+              <span className="text-[1rem] text-white transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                 Download Brochure
+              </span>
+
+              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full bg-white flex items-center justify-center TextBlue text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
+                <MdOutlineFileDownload/>
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

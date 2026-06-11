@@ -350,6 +350,11 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GrStatusGood } from "react-icons/gr";
+import { BiSupport } from "react-icons/bi";
+import { CgDisplayFlex } from "react-icons/cg";
+import { IoPricetags } from "react-icons/io5";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -492,11 +497,7 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                  <img
-                    src="/images/Home/global-search.svg"
-                    alt="img"
-                    className="w-1/2 h-1/2 object-cover transition-all duration-500 group-hover:rotate-[25deg] group-hover:scale-110"
-                  />
+                  <GrStatusGood className="text-[#ED3A1C] text-[1.5rem]"/>
                 </div>
 
                 <div className="mt-[2rem]">
@@ -518,11 +519,7 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                  <img
-                    src="/images/Home/archive-book.svg"
-                    alt="img"
-                    className="w-1/2 h-1/2 object-cover transition-all duration-500 group-hover:rotate-[25deg] group-hover:scale-110"
-                  />
+                 <BiSupport className="text-[#ED3A1C] text-[1.5rem] "/>
                 </div>
 
                 <div className="mt-[2rem]">
@@ -547,12 +544,8 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                  <img
-                    src="/images/Home/wifi-square.svg"
-                    alt="img"
-                    className="w-1/2 h-1/2 object-cover transition-all duration-500 group-hover:rotate-[25deg] group-hover:scale-110"
-                  />
-                </div>
+                 < CgDisplayFlex  className="text-[#ED3A1C] text-[1.5rem] "/>
+                </div> 
 
                 <h3 className="font-medium text-[#111827] transition-all duration-500 group-hover:text-white">
                   Wide Product Range
@@ -567,11 +560,7 @@ export default function WhyChooseIndosol() {
               >
                 <div>
                   <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                    <img
-                      src="/images/Home/archive-book.svg"
-                      alt="img"
-                      className="w-1/2 h-1/2 object-cover transition-all duration-500 group-hover:rotate-[25deg] group-hover:scale-110"
-                    />
+                   < IoPricetags className="text-[#ED3A1C] text-[1.5rem] "/>
                   </div>
                 </div>
 
@@ -594,11 +583,7 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                  <img
-                    src="/images/Home/global-search.svg"
-                    alt="img"
-                    className="w-1/2 h-1/2 object-cover transition-all duration-500 group-hover:rotate-[25deg] group-hover:scale-110"
-                  />
+                   < AiOutlineGlobal  className="text-[#ED3A1C] text-[1.5rem] "/>
                 </div>
 
                 <h3 className="font-medium text-[#111827] transition-all duration-500 group-hover:text-white">

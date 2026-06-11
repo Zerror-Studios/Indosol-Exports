@@ -121,8 +121,10 @@ export default function ContactSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#f4f4f4] py-[6rem] pt-[10vw] overflow-hidden max-sm:pt-[15vh]"
+      className="w-full bg-[#f4f4f4] py-[6rem] pt-[10vw] overflow-hidden max-sm:pt-[15vh] relative"
     >
+
+      <div className="w-full h-[10vh] bg-gradient-to-b absolute top-0 left-0 from-black/30 to-transparent"></div>
       <div className="w-[90vw] max-w-[90rem] mx-auto">
         {/* Top Content */}
         <div className="contact-top w-full border-b border-[#dddddd] pb-[4rem]">
