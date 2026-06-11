@@ -28,13 +28,10 @@ export default function AboutSection() {
       gsap.fromTo(
         words,
         {
-          opacity: 0,
-          y: 30,
-          color: "#b0b0b0",
+          
         },
         {
           opacity: 1,
-          y: 0,
           color: (i, target) =>
             target.classList.contains("blue-word") ? "#0D40A2" : "#6B7280",
 
@@ -261,7 +258,20 @@ export default function AboutSection() {
               ].map((word, index) => (
                 <span
                   key={index}
-                  className={`heading-word text-[#b0b0b0]
+                  className={` text-[#ffffff]  relative z-90
+                    ${
+                      word === "Pharmaceutical" ||
+                      word === "Ingredients" ||
+                      word === "(APIs),"
+                        ? "italic "
+                        : ""
+                    }`}
+                >
+                  {word}
+
+                  <span
+                  key={index}
+                  className={`heading-word text-[#b0b0b0] absolute top-0 left-0 z-99
                     ${
                       word === "Pharmaceutical" ||
                       word === "Ingredients" ||
@@ -271,6 +281,7 @@ export default function AboutSection() {
                     }`}
                 >
                   {word}
+                </span>
                 </span>
               ))}
             </h2>

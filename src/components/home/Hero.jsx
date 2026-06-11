@@ -201,7 +201,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col w-full justify-center h-full pl-[5vw] pr-[5vw] pt-[7vw] pb-[7vw]">
         {/* Heading — each line clipped so it reveals upward */}
-        <h1 className="text-white leading-tight tracking-tight mb-4">
+        <h1 className="text-white leading-tight tracking-tight mb-4 ">
           <span className="block overflow-hidden">
             <span ref={line1Ref} className="block will-change-transform">
               Global Pharma API,
@@ -233,14 +233,14 @@ export default function Hero() {
         ref={ctaRef}
           href={`/products`} target="blank">
             <button
-              className="flex items-center gap-[1rem] mt-10 border border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
+              className="flex items-center gap-[1rem] mt-10 border bg-white border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
               
             >
-              <span className="text-[1rem] text-white transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+              <span className="text-[1rem] TextBlue  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
                  Explore All Products
               </span>
 
-              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full bg-white flex items-center justify-center TextBlue text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
+              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full BgBlue text-white flex items-center justify-center text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
                 <FaArrowRight />
               </div>
             </button>

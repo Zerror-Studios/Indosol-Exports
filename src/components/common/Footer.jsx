@@ -19,14 +19,14 @@ export default function Footer() {
             <img
               src="/icons/logo.png"
               alt="Indosol Exports"
-              className="w-[6rem] max-sm:w-[10rem] object-contain"
+              className="w-[150px] max-sm:w-[10rem] object-contain"
             />
 
-            <h2 className="text-[2.2rem] leading-[2.8rem] font-semibold">
+            <h3 className="text-[2.2rem] leading-[2.8rem]">
               Trusted Quality
               <br />
               Global Supply
-            </h2>
+            </h3>
           </div>
 
           {/* Social Icons */}
@@ -49,7 +49,7 @@ export default function Footer() {
 
         {/* Company */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-[1.5rem] font-semibold mb-[2rem]">Company</h3>
+          <h3 className="text-[1.5rem]  mb-[2rem]">Company</h3>
 
           <ul className="flex flex-col gap-2 text-white/70 items-center md:items-start">
             <li>
@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Utility */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-[1.5rem] font-semibold mb-[2rem]">Utility</h3>
+          <h3 className="text-[1.5rem]  mb-[2rem]">Utility</h3>
 
           <ul className="flex flex-col gap-2 text-white/70 items-center md:items-start">
             <li>
@@ -105,7 +105,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-[1.5rem] font-semibold mb-[2rem]">Contact</h3>
+          <h3 className="text-[1.5rem] mb-[2rem]">Contact</h3>
 
           <div className="flex flex-col gap-[2rem] text-white/70 text-[1.15rem] leading-[2rem] items-center md:items-start">
             {/* Phone */}

@@ -18,11 +18,57 @@ export default function ProductsSection() {
     if (el && !rowRefs.current.includes(el)) rowRefs.current.push(el);
   };
 
+  // const products = [
+  //   {
+  //     title: "APIs",
+  //     description:
+  //       "High-quality APIs sourced and supplied to meet global pharmaceutical standards with reliable and scalable supply.",
+  //     tags: [
+  //       "Amoxicillin THD BP compacted and powder",
+  //       "Ampicillin THD BP compact and powder",
+  //       "Ibuprofen BP",
+  //       "Mebendazole Off white USP and Poly C BP grade",
+  //       "Ketoconazole USP",
+  //       "Metformin HCL",
+  //       "Paracetamol BP",
+  //       "Albendazole USP",
+  //     ],
+  //     image: "/random_video/ah1.mp4",
+  //   },
+  //   {
+  //     title: "Excipients",
+  //     description:
+  //       "Reliable excipient solutions designed to enhance formulation efficiency and consistency at scale.",
+  //     tags: [
+  //       "Sorbitol",
+  //       "Maize Starch",
+  //       "MCC 101 / 102",
+  //       "Sodium CMC",
+  //       "Liquid Glucose",
+  //       "Sodium Starch Glycolate",
+  //     ],
+  //     image: "/random_video/ap1.mp4",
+  //   },
+  //   {
+  //     title: "Packaging Material",
+  //     description:
+  //       "A wide range of packaging materials supporting safe storage and transportation with enhanced durability.",
+  //     tags: [
+  //       "Aluminium Foils",
+  //       "Plastic screw caps",
+  //       "Aluminium caps",
+  //       "Plastic spoons / droppers",
+  //       "PVC",
+  //     ],
+  //     image: "/random_video/ab1.mp4",
+  //   },
+  // ];
+
   const products = [
     {
       title: "APIs",
       description:
-        "High-quality APIs sourced and supplied to meet global pharmaceutical standards with reliable and scalable supply.",
+        "We provide a comprehensive portfolio of Active Pharmaceutical Ingredients (APIs) manufactured to meet international quality standards. Our products are sourced from trusted partners, ensuring consistent quality, regulatory compliance, and a dependable supply chain for pharmaceutical manufacturers worldwide.",
       tags: [
         "Amoxicillin THD BP compacted and powder",
         "Ampicillin THD BP compact and powder",
@@ -33,12 +79,12 @@ export default function ProductsSection() {
         "Paracetamol BP",
         "Albendazole USP",
       ],
-      image: "/random_video/ah1.mp4",
+      image: "/random_video/ae1.mp4",
     },
     {
       title: "Excipients",
       description:
-        "Reliable excipient solutions designed to enhance formulation efficiency and consistency at scale.",
+        "Our excipient solutions are carefully selected to support formulation stability, performance, and manufacturing efficiency. With reliable sourcing and stringent quality controls, we help pharmaceutical companies achieve consistent product outcomes at every stage of production.",
       tags: [
         "Sorbitol",
         "Maize Starch",
@@ -52,7 +98,7 @@ export default function ProductsSection() {
     {
       title: "Packaging Material",
       description:
-        "A wide range of packaging materials supporting safe storage and transportation with enhanced durability.",
+        "We offer high-quality pharmaceutical packaging materials designed to protect product integrity throughout storage, transportation, and distribution. Our packaging solutions combine durability, safety, and compliance to support a wide range of pharmaceutical applications.",
       tags: [
         "Aluminium Foils",
         "Plastic screw caps",
@@ -81,7 +127,7 @@ export default function ProductsSection() {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
 
       // ── Each product row: all parts rise from bottom ─────────────
@@ -104,7 +150,7 @@ export default function ProductsSection() {
               start: "top 82%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
 
         // Tags stagger up
@@ -124,7 +170,7 @@ export default function ProductsSection() {
               start: "top 82%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
 
         // Right image rises up
@@ -142,9 +188,9 @@ export default function ProductsSection() {
               trigger: row,
               start: "top 82%",
               toggleActions: "play none none none",
-              scrub:true,
+              scrub: true,
             },
-          }
+          },
         );
       });
     }, sectionRef);
@@ -153,19 +199,18 @@ export default function ProductsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#082661] py-[6rem] overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="w-full bg-[#082661] py-[6rem] overflow-hidden"
+    >
       <div className="w-[90vw] mx-auto">
         {/* Heading */}
         <div className="flex items-start justify-between gap-[2rem] flex-wrap">
-          <h1
-            ref={headingRef}
-            className="text-white "
-            style={{ opacity: 0 }}
-          >
-            Products We <br /> Provide
+          <h1 ref={headingRef} className="text-white " style={{ opacity: 0 }}>
+            Our Products
           </h1>
 
-          <Link href={`/products`} >
+          <Link href={`/products`}>
             <button
               ref={btnRef}
               className="flex items-center gap-[1rem] border border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group"
@@ -180,8 +225,6 @@ export default function ProductsSection() {
               </div>
             </button>
           </Link>
-          
-          
         </div>
 
         {/* Product Items */}
@@ -211,7 +254,26 @@ export default function ProductsSection() {
                   {item.tags.map((tag, tagIndex) => (
                     <p
                       key={tagIndex}
-                      className="product-tag bg-white/10 border border-white/5 text-white/80 px-[1rem] py-[0.7rem] rounded-full"
+                      className={`
+    product-tag
+    bg-white/10
+    border
+    border-white/10
+    text-white/80
+    px-[1rem]
+    py-[0.7rem]
+    rounded-full
+    cursor-pointer
+    transition-all
+    duration-500
+    ease-out
+    hover:bg-white
+    hover:text-[#082661]
+    hover:border-white
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-[0_10px_30px_rgba(255,255,255,0.15)]
+  `}
                       style={{ opacity: 0 }}
                     >
                       {tag}
@@ -222,15 +284,17 @@ export default function ProductsSection() {
 
               {/* Right Side */}
               <div
-                className="product-right w-full lg:w-[38%] h-[50%]"
+                className="product-right w-full lg:w-[38%]  "
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="relative w-full rounded-[1.8rem] overflow-hidden group">
                   <video
-                   loop autoPlay muted
+                    loop
+                    autoPlay
+                    muted
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover duration-500 group-hover:scale-105"
+                    className="w-full h-[40vh] object-cover duration-500 group-hover:scale-105"
                   />
                   {/* <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[4.5rem] h-[4.5rem] rounded-full bg-white text-[#06256F] text-[1.5rem] flex items-center justify-center duration-300 hover:scale-110">
                     <FaArrowRight/>

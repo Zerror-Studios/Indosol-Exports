@@ -600,7 +600,7 @@ export default function WhyChooseIndosol() {
             style={{ opacity: 0 }}
           >
             <img
-              src="/images/Home/Img2Home.webp"
+              src="/images/Home/exp.jpg"
               alt="Why Choose Indosol"
               className="w-full h-full object-cover rounded-[1.3rem]"
             />

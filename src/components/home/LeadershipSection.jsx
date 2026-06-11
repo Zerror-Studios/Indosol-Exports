@@ -251,7 +251,7 @@ export default function LeadershipSection() {
         const tl = gsap.timeline({ paused: true });
 
         tl.to(card, {
-          y: -8,
+          // y: -8,
           duration: 0.4,
           ease: "power3.out",
         })
@@ -374,7 +374,7 @@ export default function LeadershipSection() {
                   }}
                 />
 
-                {/* View Bio Button */}
+                {/* View Bio Button
                 <button
                   ref={(el) => (bioRefs.current[index] = el)}
                   className={`
@@ -396,7 +396,7 @@ export default function LeadershipSection() {
                   }}
                 >
                   View Full Bio
-                </button>
+                </button> */}
               </div>
 
               {/* Content */}
