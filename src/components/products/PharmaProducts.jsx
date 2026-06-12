@@ -415,7 +415,7 @@ export default function PharmaProducts() {
     },
   ];
 
-   const headers = ["Product Name"];
+  const headers = ["Product Name"];
 
   useEffect(() => {
     contentRefs.current.forEach((content, index) => {
@@ -438,6 +438,11 @@ export default function PharmaProducts() {
     });
   }, [activeIndex]);
 
+  const splitProducts = (products) => {
+    const middle = Math.ceil(products.length / 2);
+    return [products.slice(0, middle), products.slice(middle)];
+  };
+
   return (
     <section className="w-full bg-white py-16 md:py-[7rem]">
       <div className="w-[90vw] mx-auto">
@@ -450,7 +455,7 @@ export default function PharmaProducts() {
         </div>
 
         {/* Accordion */}
-        <div className="flex flex-col gap-6 md:gap-[2rem]">
+        <div className="flex flex-col gap-6 md:gap-[2rem] ">
           {categories.map((category, index) => {
             const isActive = activeIndex === index;
 
@@ -462,7 +467,7 @@ export default function PharmaProducts() {
                 {/* Accordion Header */}
                 <button
                   onClick={() => setActiveIndex(isActive ? null : index)}
-                  className="w-full flex items-center justify-between px-5 py-5 sm:px-8 sm:py-8 md:px-[3rem] md:py-[3rem] text-left gap-4"
+                  className="w-full flex items-center justify-between px-5 py-5 sm:px-8 sm:py-8 md:px-[1/5rem] md:py-[1rem] text-left gap-4"
                 >
                   <h2 className="text-lg sm:text-2xl md:text-[2rem] TextDarkGray leading-[1.3]">
                     {category.title}
@@ -489,7 +494,28 @@ export default function PharmaProducts() {
                         ))}
                       </div>
                       {/* Body */}
-                      <div className="p-[1rem] flex flex-col gap-[1rem] bg-[#f7f7f7]">
+                      <div className="grid grid-cols-2 gap-[1rem] p-[1rem] bg-[#f7f7f7]">
+                        {splitProducts(category.products).map(
+                          (column, index) => (
+                            <div
+                              key={index}
+                              className="flex flex-col gap-[1rem]"
+                            >
+                              {column.map((row, i) => (
+                                <div
+                                  key={i}
+                                  className="bg-white rounded-[0.8rem] px-[1.5rem] py-[1.8rem]"
+                                >
+                                  <p className="text-[1.35rem] text-[#6b7280]">
+                                    {row[0]}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          ),
+                        )}
+                      </div>
+                      {/* <div className="p-[1rem] flex flex-col gap-[1rem] bg-[#f7f7f7]">
                         {category.products.map((row, i) => (
                           <div
                             key={i}
@@ -505,12 +531,24 @@ export default function PharmaProducts() {
                             ))}
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* ── MOBILE CARDS (below md) ── */}
                     <div className="flex flex-col gap-3 md:hidden">
-                      {category.products.map((row, i) => (
+                      <div className="p-[1rem] grid grid-cols-2 gap-[1rem] bg-[#f7f7f7]">
+                        {category.products.map((row, i) => (
+                          <div
+                            key={i}
+                            className="bg-white rounded-[0.8rem] px-[1.5rem] py-[1.8rem]"
+                          >
+                            <p className="text-[1.35rem] text-[#6b7280]">
+                              {row[0]}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      {/* {category.products.map((row, i) => (
                         <div
                           key={i}
                           className="bg-white border border-[#e5e7eb] rounded-xl p-4 flex flex-col gap-2"
@@ -529,7 +567,7 @@ export default function PharmaProducts() {
                             </div>
                           ))}
                         </div>
-                      ))}
+                      ))} */}
                     </div>
                   </div>
                 </div>
