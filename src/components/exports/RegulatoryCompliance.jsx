@@ -157,7 +157,7 @@ export default function RegulatoryCompliance() {
               style={{ perspective: "700px" }}
             >
               {split("Regulatory Compliance &")}
-              <br />
+         
               {split("Documentation Support")}
             </h1>
 
