@@ -497,7 +497,7 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                  <GrStatusGood className="text-[#ED3A1C] text-[1.5rem]"/>
+                  <GrStatusGood className="text-[#ED3A1C] text-[1.5rem]" />
                 </div>
 
                 <div className="mt-[2rem]">
@@ -519,7 +519,7 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                 <BiSupport className="text-[#ED3A1C] text-[1.5rem] "/>
+                  <BiSupport className="text-[#ED3A1C] text-[1.5rem] " />
                 </div>
 
                 <div className="mt-[2rem]">
@@ -544,12 +544,16 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                 < CgDisplayFlex  className="text-[#ED3A1C] text-[1.5rem] "/>
-                </div> 
+                  <CgDisplayFlex className="text-[#ED3A1C] text-[1.5rem] " />
+                </div>
 
                 <h3 className="font-medium text-[#111827] transition-all duration-500 group-hover:text-white">
                   Wide Product Range
                 </h3>
+
+                <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                  Extensive range of quality pharmaceutical products.
+                </span>
               </div>
 
               {/* CARD 4 */}
@@ -560,7 +564,7 @@ export default function WhyChooseIndosol() {
               >
                 <div>
                   <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                   < IoPricetags className="text-[#ED3A1C] text-[1.5rem] "/>
+                    <IoPricetags className="text-[#ED3A1C] text-[1.5rem] " />
                   </div>
                 </div>
 
@@ -583,12 +587,16 @@ export default function WhyChooseIndosol() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                   < AiOutlineGlobal  className="text-[#ED3A1C] text-[1.5rem] "/>
+                  <AiOutlineGlobal className="text-[#ED3A1C] text-[1.5rem] " />
                 </div>
 
                 <h3 className="font-medium text-[#111827] transition-all duration-500 group-hover:text-white">
                   Global Reach
                 </h3>
+
+                <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                 Supplying trusted healthcare products worldwide.
+                </span>
               </div>
             </div>
           </div>

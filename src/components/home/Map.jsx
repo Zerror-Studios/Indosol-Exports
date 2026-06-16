@@ -179,7 +179,7 @@ const Map = () => {
 }, []);
   return (
     <div className="MapTopMainCont relative h-[400svh] w-full bg-white">
-      <div className="sticky top-0 left-0 h-screen w-full">
+      <div className="sticky top-0 left-0 h-screen w-full overflow-hidden">
         {/* Text */}
         <div className="absolute top-[8%] left-0 z-20 flex w-full items-center justify-center capitalize">
   <div className="relative flex h-[30vh] w-full items-center justify-center">

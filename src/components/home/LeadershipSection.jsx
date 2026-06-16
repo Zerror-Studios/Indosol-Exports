@@ -195,7 +195,7 @@ export default function LeadershipSection() {
     {
       name: "Danial Bryan",
       role: "Indosol - Exports Manager",
-      image: "/images/Home/P1_11zon.png",
+      image: "/images/ppp.png",
     },
     {
       name: "Alphonso Pearson",
@@ -338,23 +338,24 @@ export default function LeadershipSection() {
             >
               {/* Image Card */}
               <div className="relative bg-white rounded-[1.4rem] overflow-hidden border border-[#ececec] group">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className={`
-      w-full 
-      h-[30rem] 
-      object-cover 
-      grayscale 
-      hover:grayscale-0
-      duration-500
-      relative
-      z-50
-    `}
-                />
+               <img
+  src={member.image}
+  alt={member.name}
+ className={`
+  // w-full 
+  h-full
+  object-cover 
+  object-center    
+  grayscale
+  hover:grayscale-0
+  duration-500
+  relative
+  z-50
+`}
+/>
 
                 {/* Gradient Overlay */}
-                <div
+                {/* <div
                   ref={(el) => (overlayRefs.current[index] = el)}
                   className={`
       absolute 
@@ -372,7 +373,7 @@ export default function LeadershipSection() {
                   style={{
                     transform: "translateY(100%)",
                   }}
-                />
+                /> */}
 
                 {/* View Bio Button
                 <button

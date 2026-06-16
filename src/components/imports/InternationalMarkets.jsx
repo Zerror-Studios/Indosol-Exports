@@ -15,7 +15,7 @@ export default function InternationalMarkets() {
 
   const buttonsRef = useRef([]);
 
-  const regions = ["Asia", "Africa", "Middle East", "Europe"];
+  const regions = ["Asia", "Africa", "Middle East", "Europe", "South America","Southeast Asia"];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -173,7 +173,7 @@ export default function InternationalMarkets() {
             className="relative w-full xl:w-[32%] overflow-hidden rounded-[2rem] min-h-[38rem]"
           >
             <img
-              src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1400&auto=format&fit=crop"
+              src={`/images/erth.jpg`}
               alt="Earth"
               className="absolute inset-0 w-full h-full object-cover"
             />
