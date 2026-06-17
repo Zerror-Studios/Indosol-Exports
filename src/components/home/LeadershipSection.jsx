@@ -337,15 +337,15 @@ export default function LeadershipSection() {
               style={{ opacity: 0, willChange: "transform" }}
             >
               {/* Image Card */}
-              <div className="relative bg-white rounded-[1.4rem] overflow-hidden border border-[#ececec] group">
+              <div className="relative bg-white rounded-[1.4rem] aspect-square overflow-hidden border bg-amber-200 border-[#ececec] group">
                <img
   src={member.image}
   alt={member.name}
  className={`
-  // w-full 
+  w-full 
   h-full
   object-cover 
-  object-center    
+  object-top   
   grayscale
   hover:grayscale-0
   duration-500

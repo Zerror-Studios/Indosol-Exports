@@ -183,6 +183,8 @@ const countries = [
 
 const Map = () => {
   useEffect(() => {
+    if(window.innerWidth < "700px") return
+
     const headings = gsap.utils.toArray(".heading");
     const maps = gsap.utils.toArray(".country-map");
 
@@ -269,10 +271,10 @@ const Map = () => {
 
 
   return (
-    <div className="MapTopMainCont relative h-[400svh] w-full bg-white">
-      <div className="sticky top-0 left-0 h-screen w-full overflow-hidden">
+    <div className="MapTopMainCont relative h-[400svh] max-sm:h-fit w-full bg-white">
+      <div className="sm:sticky top-0 left-0 sm:h-screen max-sm:pb-20   w-full overflow-hidden">
         {/* Text Section */}
-        <div className="absolute top-[8%] left-0 z-20 flex w-full items-center justify-center capitalize">
+        <div className="absolute top-[8%] left-0 z-20 max-sm:hidden flex w-full items-center justify-center capitalize">
           <div className="relative flex h-[30vh] w-full items-center justify-center">
             {countries.map((country, index) => (
               <h1
@@ -286,14 +288,14 @@ const Map = () => {
         </div>
 
         {/* Map Section */}
-        <div className="absolute bottom-0 left-0 z-[1] flex h-[70vh] w-full items-center justify-center pb-[5vh]">
-          <div className="relative h-full w-full">
+        <div className="sm:absolute bottom-0 left-0 z-[1] flex h-[70vh] w-full max-sm:h-fit  items-center justify-center sm:pb-[5vh] ">
+          <div className="relative sm:h-full max-sm:h-fit w-full ">
             {/* Base World Map */}
-            {/* <img
+            <img
               src="/images/Home/map.svg"
               alt="World Map"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-            /> */}
+              className=" inset-0 sm:hidden w-full object-cover object-center"
+            />
 
             {/* Country Highlight Maps */}
             {countries.map((country, index) => (
@@ -301,7 +303,7 @@ const Map = () => {
                 key={index}
                 src={country.image}
                 alt={country.name}
-                className={`country-map absolute inset-0 h-full w-full object-contain opacity-0 `}
+                className={`country-map absolute max-sm:hidden inset-0 h-full w-full object-contain opacity-0 `}
               />
             ))}
           </div>
