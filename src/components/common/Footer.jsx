@@ -165,7 +165,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#001B57] text-white pt-14 md:pt-20 pb-8 px-6 md:px-[5vw]">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-white/10 pb-10 text-center md:text-left">
-
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start gap-6">
           <div className="flex flex-col items-center md:items-start gap-4">
@@ -206,9 +205,7 @@ export default function Footer() {
 
         {/* Company */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-xl mb-5 font-medium">
-            Company
-          </h3>
+          <h3 className="text-xl mb-5 font-medium">Company</h3>
 
           <ul className="space-y-3 text-white/70">
             <li>
@@ -243,12 +240,9 @@ export default function Footer() {
           </ul>
         </div>
 
-
         {/* Utility */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-xl mb-5 font-medium">
-            Utility
-          </h3>
+          <h3 className="text-xl mb-5 font-medium">Utility</h3>
 
           <ul className="space-y-3 text-white/70">
             <li>
@@ -258,28 +252,30 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href="/privacy-policy" className="hover:text-white transition">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white transition"
+              >
                 Privacy Policy
               </Link>
             </li>
 
             <li>
-              <Link href="/terms-condition" className="hover:text-white transition">
+              <Link
+                href="/terms-condition"
+                className="hover:text-white transition"
+              >
                 Terms & Conditions
               </Link>
             </li>
           </ul>
         </div>
 
-
         {/* Contact */}
         <div className="md:border-l md:border-white/10 md:pl-[3vw]">
-          <h3 className="text-xl mb-5 font-medium">
-            Contact
-          </h3>
+          <h3 className="text-xl mb-5 font-medium">Contact</h3>
 
           <div className="space-y-6 text-white/70 text-base">
-
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <FaPhoneAlt className="text-white mt-1" />
 
@@ -307,7 +303,6 @@ export default function Footer() {
               </div>
             </div>
 
-
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <FaMapMarkerAlt className="text-white mt-1" />
 
@@ -319,15 +314,23 @@ export default function Footer() {
                 Mumbai - 400021, India
               </p>
             </div>
-
           </div>
         </div>
-
       </div>
 
       {/* Bottom */}
-      <div className="pt-6 text-center text-sm md:text-base text-white/60">
+      <div className="pt-6 flex justify-between items-center max-sm:flex-col text-sm md:text-base text-white/60">
         © 2026 Indosol Exports. All Rights Reserved.
+        <a href="https://www.zerrorstudios.com/" target="blank">
+          <span className=" relative flex w-fit  group  font-light  cursor-pointer select-none ">
+            {" "}
+            <span className="mr-2">Developed by </span> 
+            <div>
+            <span className="text-white font-light ">Zerror Studios </span>
+            <div className="h-[1px] w-[0px] bg-white transition-all duration-150 ease-in-out font-light group-hover:w-full select-none  "></div>
+            </div>
+          </span>
+        </a>
       </div>
     </footer>
   );

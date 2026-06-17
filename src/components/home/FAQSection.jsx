@@ -144,7 +144,7 @@ export default function FAQSection() {
     <section className="w-full bg-[#f5f5f5] pt-10 ">
       <div className="grid lg:grid-cols-2 min-h-screen">
         {/* LEFT SIDE */}
-        <div className="lg:sticky lg:top-0 flex items-start justify-center border-r border-[#dddddd]">
+        <div className="lg:sticky lg:top-0 flex items-start justify-center ">
           <div className="w-full px-8 lg:px-16">
             <h1>
               Frequently Asked
@@ -156,7 +156,7 @@ export default function FAQSection() {
 
         {/* RIGHT SIDE */}
         <div className="px-8 lg:px-16  ">
-          <div className="border-t border-[#dddddd]">
+          <div className="">
             {faqData.map((item, index) => (
               <div key={index} className="border-b border-[#dddddd]">
                 <button
