@@ -245,7 +245,7 @@ export default function ContactSection() {
             {/* Image */}
             <div className="w-full overflow-hidden rounded-[1rem]">
               <img
-                src="/images/contact/ContactImg.webp"
+                src="/images/contact/CUS.jpg"
                 alt="contact"
                 className="contact-image w-full h-[26rem] object-cover"
               />
@@ -269,14 +269,20 @@ export default function ContactSection() {
                 </h4>
 
                 <div className="flex flex-col gap-[0.6rem]">
-                  <p className="text-[1rem] TextLiteGray">
-                    info@baselarea.swiss
-                  </p>
-
-                  <p className="text-[1rem] TextLiteGray">
-                    bimal@iscpl.com
-                  </p>
-                </div>
+  {[
+    "admin@indosolexports.in",
+    "bimal@iscpl.com",
+    "manish0307@gmail.com",
+  ].map((email) => (
+    <a
+      key={email}
+      href={`mailto:${email}`}
+      className="text-[1rem] TextLiteGray hover:underline"
+    >
+      {email}
+    </a>
+  ))}
+</div>
               </div>
 
               {/* Phone */}

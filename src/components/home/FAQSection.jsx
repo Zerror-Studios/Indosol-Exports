@@ -21,39 +21,40 @@ export default function FAQSection() {
   const faqRowRefs = useRef([]);
 
   const faqData = [
-    {
-      question: "What products does Indosol Exports specialize in?",
-      answer:
-        "We specialize in exporting pharmaceutical-grade APIs, excipients, and packaging materials that meet international quality and regulatory standards.",
-    },
-     {
+  {
+    question: "What types of pharmaceutical products does Indosol Exports supply?",
+    answer:
+      "We supply a comprehensive range of pharmaceutical products including Active Pharmaceutical Ingredients (APIs), excipients, and pharmaceutical packaging materials. All products are sourced from reputed and certified Indian manufacturers.",
+  },
+  {
       question:
         "Who is JHNH and what is Indosol's relationship with them?",
       answer:
         "JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading China-based manufacturer of PVP-based pharmaceutical excipients. Effective 1 December 2025, Indosol Exports has been officially appointed as JHNH's Authorised Distributor in India — covering marketing, domestic inventory management, sale, and distribution of their products across the country. Through this partnership, Indosol supplies JHNH's complete excipient range including Povidone, Crospovidone, and Copovidone) directly to large and mid-sized pharmaceutical manufacturers across India.",
     },
-    {
-      question: "Do you comply with global pharmaceutical regulations?",
-      answer:
-        "Yes, all our products comply with international pharmaceutical regulations and undergo strict quality assurance processes.",
-    },
-    {
-      question: "Which countries do you export to?",
-      answer:
-        "We export to multiple countries across Asia, Europe, Africa, and the Middle East with trusted global logistics support.",
-    },
-    {
-      question: "How do you ensure product quality?",
-      answer:
-        "Every product passes through detailed quality checks, documentation verification, and certified manufacturing procedures.",
-    },
-    {
-      question: "Can you handle bulk and custom orders?",
-      answer:
-        "Absolutely. We provide scalable export solutions for both bulk shipments and customized client requirements.",
-    },
-   
-  ];
+  {
+    question: "Which countries does Indosol Exports supply to?",
+    answer:
+      "We export to over 40 countries across Africa, Asia, Latin America, the Middle East, and other global markets. With more than two decades of experience in international pharmaceutical trade, we have built a strong and trusted global clientele.",
+  },
+  {
+    question: "How does Indosol Exports ensure the quality of its products?",
+    answer:
+      "We work exclusively with manufacturers who comply with international quality standards. Our team conducts factory visits, reviews regulatory documentation, and performs thorough quality checks before procurement to ensure every shipment meets the specifications and regulatory requirements of the destination country.",
+  },
+  {
+    question: "Can Indosol Exports assist with documentation and regulatory requirements?",
+    answer:
+      "Yes. We provide complete export documentation support, including Certificates of Analysis (CoA), Certificates of Origin, GMP certificates, and other regulatory paperwork as required by the buyer’s country. Our experienced team ensures smooth customs clearance and compliance throughout the process.",
+  },
+  {
+    question:
+      "Can I source JHNH excipients — Povidone, Crospovidone, and Copovidone — through Indosol Exports?",
+    answer:
+      "Yes. Effective December 2025, Indosol Exports is the authorised distributor of J H Nanhang (JHNH) products — Povidone, Crospovidone, and Copovidone — for Pan India supply. These high-quality excipients are widely used in the Pharmaceutical, Food, and Cosmetic industries. This strategic partnership strengthens our domestic presence and service capabilities while complementing our global export operations.",
+  },
+];
+
 
   // ── Accordion GSAP logic ─────────────────────────────────────────
   useEffect(() => {
@@ -141,7 +142,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[#f5f5f5] pt-10 ">
+    <section className="w-full bg-[#FFFFFF] pt-20 ">
       <div className="grid lg:grid-cols-2 min-h-screen">
         {/* LEFT SIDE */}
         <div className="lg:sticky lg:top-0 flex items-start justify-center ">

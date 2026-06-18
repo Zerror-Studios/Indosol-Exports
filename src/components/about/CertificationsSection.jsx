@@ -196,29 +196,29 @@ export default function CertificationsSection() {
       id: "01",
       title: "ISO 9001:2015 Standards",
       description:
-        "ISO 9001:2015 certification affirms our devotion to consistent quality management, operational superiority, and sustained progress within our pharmaceutical sourcing and export operations.",
+        "ISO 9001:2015 Standards Our ISO 9001:2015 certification reflects our commitment to maintaining consistent quality management systems across all sourcing, procurement, and export operations.",
       link: "/certificates/IE ISO 9001-2015 - 02.04.2028.pdf",
     },
     {
       id: "02",
       title: "GMP Documentation Support",
       description:
-        "Thorough GMP documentation backing facilitating compliance with regulations, product openness, and frictionless global import consents.",
-      link: "/certificates/IE Export House Certificate 3 star Valid 31-03-2028.pdf",
+        "GMP Documentation Support We provide comprehensive GMP documentation for all supplied products, ensuring full regulatory compliance and smooth import approvals in the buyer's country.",
+      link: "",
     },
     {
       id: "03",
       title: "COA & MSDS Availability",
       description:
-        "Providing COA and MSDS documentation to ensure product quality, safety compliance, and seamless global trade operations.",
-      link: "/certificates/IE FSSAI License Valid 04-09-2027.pdf",
+        "COA & MSDS Availability Certificate of Analysis and Material Safety Data Sheets are made available for every product, giving our clients complete confidence in quality, safety, and traceability.",
+      link: "",
     },
     {
       id: "04",
       title: "International Export Compliance",
       description:
-        "Ensuring smooth global shipments through reliable export documentation and international regulatory compliance support.",
-      link: "/certificates/JHNH Product Guide 2024 - INDOSOL_compressed.pdf",
+        "International Export Compliance We ensure every shipment is backed by accurate and complete export documentation, keeping our clients fully compliant with the regulatory requirements of their respective markets.",
+      link: "",
     },
   ];
 
@@ -266,6 +266,7 @@ export default function CertificationsSection() {
                 {/* Certificate Button */}
                 <div
                   className={`
+                     ${!item.link ? "hidden" : ""}
     opacity-100 
     translate-y-0 
     md:opacity-0
@@ -281,6 +282,7 @@ export default function CertificationsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
+                     
       inline-flex 
       items-center 
       justify-center

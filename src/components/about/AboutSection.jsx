@@ -93,19 +93,11 @@ export default function AboutSection() {
             </h1>
             <div className="mt-[3rem] flex flex-col gap-[2rem]">
               <p ref={para1Ref} className="TextLiteGray">
-                Indosol Exports is a Mumbai-based pharmaceutical export company
-                specializing in APIs, excipients, intermediates, and allied
-                healthcare products. With more than two decades of international
-                trade expertise, the company supplies pharmaceutical-grade
-                materials to customers across Asia, Africa, the Middle East,
-                Europe, and other international markets.
+                Indosol Exports is a Mumbai-based pharmaceutical export company specializing in APIs, excipients, and packaging materials. With more than two decades of international trade expertise, the company supplies pharmaceutical-grade materials to customers across Asia, Africa, the Middle East, Europe, and other international markets.
+Expanding beyond exports, Indosol Exports is now the authorised Pan India distributor of J H Nanhang (JHNH) products — Povidone, Crospovidone, and Copovidone — effective December 2025. This strategic partnership strengthens our presence in the domestic pharmaceutical, food, and cosmetic industries, enabling us to serve Indian manufacturers with the same reliability and quality we deliver globally.
+By working alongside prominent Indian manufacturers and preserving strong worldwide associations, the company delivers reliable supply solutions with consistent quality, competitive costs, and compliance with regulations.
               </p>
-              <p ref={para2Ref} className="TextLiteGray">
-                By working alongside prominent Indian manufacturers and
-                preserving strong worldwide associations, the company delivers
-                reliable supply solutions with consistent quality, competitive
-                costs, and compliance with regulations.
-              </p>
+              
             </div>
           </div>
 

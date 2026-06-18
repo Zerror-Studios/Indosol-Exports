@@ -15,11 +15,12 @@ export default function ServicesSection() {
   const serviceItemRefs = useRef([]);
 
   const services = [
-    { icon: <FiBox />, title: "API Sourcing" },
-    { icon: <FiGrid />, title: "Excipients & Intermediates" },
-    { icon: <FiFileText />, title: "Export Documentation" },
-    { icon: <FiTruck />, title: "Global Logistics Support" },
-    { icon: <FiLayers />, title: "Consolidated Supply Solutions" },
+    { icon: <FiBox />, title: "API Sourcing Procuring high-quality Active Pharmaceutical Ingredients from GMP-certified Indian manufacturers at competitive prices." },
+    { icon: <FiGrid />, title: "Excipients & Packaging Materials Supplying a wide range of pharmaceutical-grade excipients and compliant packaging materials tailored to your formulation needs." },
+    { icon: <FiFileText />, title: "Export Documentation Handling all regulatory paperwork including CoA, Certificate of Origin, GMP certificates, and customs documentation for hassle-free exports." },
+    { icon: <FiTruck />, title: "Global Logistics Support End-to-end logistics planning including palletisation, fumigation, freight coordination, and timely delivery to over 40 countries." },
+    { icon: <FiLayers />, title: "Consolidated Supply Solutions Acting as your single Indian sourcing partner — bridging the gap between overseas buyers and domestic manufacturers efficiently." },
+    { icon: <FiBox />, title: "Pan India Distribution Authorised distributor of J H Nanhang (JHNH) excipients — Povidone, Crospovidone, and Copovidone — for domestic pharmaceutical, food, and cosmetic industries." },
   ];
 
   useEffect(() => {
@@ -110,7 +111,7 @@ export default function ServicesSection() {
               ref={headingRef}
               className="text-white  max-w-[40rem]"
             >
-              Complete Pharmaceutical Export Solutions
+              Complete Pharmaceutical Solutions
             </h1>
 
             {/* Divider */}
@@ -136,7 +137,7 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Title */}
-                  <p className=" text-white">
+                  <p className=" text-white w-[90%]">
                     {item.title}
                   </p>
                 </div>

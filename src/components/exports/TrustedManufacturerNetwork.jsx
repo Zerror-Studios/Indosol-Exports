@@ -761,7 +761,7 @@ export default function TrustedManufacturerNetwork() {
             </p>
 
             <div ref={btnsRef} className="flex items-center gap-[1rem]">
-              <button
+              {/* <button
                 ref={leftArrowRef}
                 onMouseEnter={() => arrowHover(leftArrowRef, true)}
                 onMouseLeave={() => arrowHover(leftArrowRef, false)}
@@ -769,9 +769,9 @@ export default function TrustedManufacturerNetwork() {
                 style={{ willChange: "transform" }}
               >
                 <ArrowLeft className="w-[1.2rem] h-[1.2rem]" />
-              </button>
+              </button> */}
 
-              <button
+              {/* <button
                 ref={rightArrowRef}
                 onMouseEnter={() => arrowHover(rightArrowRef, true)}
                 onMouseLeave={() => arrowHover(rightArrowRef, false)}
@@ -779,7 +779,7 @@ export default function TrustedManufacturerNetwork() {
                 style={{ willChange: "transform" }}
               >
                 <ArrowRight className="w-[1.2rem] h-[1.2rem]" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

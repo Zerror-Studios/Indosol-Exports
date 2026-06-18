@@ -506,7 +506,7 @@ export default function WhyChooseIndosol() {
                   </h3>
 
                   <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
-                    Products sourced from trusted Indian manufacturers with
+                    Products sourced from trusted manufacturers with
                     complete documentation.
                   </span>
                 </div>

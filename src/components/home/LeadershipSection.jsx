@@ -193,14 +193,14 @@ export default function LeadershipSection() {
 
   const teamMembers = [
     {
-      name: "Danial Bryan",
-      role: "Indosol - Exports Manager",
-      image: "/images/ppp.png",
+      name: "Bimal Shah",
+      role: "Experience of more than 29 years in bulk drug manufacturing facility and handled production, quality as well as purchasing of the plant with a manufacturing capacity of 2400 MT Per Annum. Handling marketing of bulk drugs and chemicals.",
+      image: "/images/Home/PERS1.png",
     },
     {
-      name: "Alphonso Pearson",
-      role: "Indosol - Exports Manager",
-      image: "/images/Home/P2_11zon.png",
+      name: "Manish Shah",
+      role: "Experience of more than 31 years in Bulk Drug Manufacturing Facility and handled marketing quantity of 2400 MT per annum of Sulphamethoxazole, with a spread of 50 countries around the globe and locally to almost all the multinational companies. Visited more then 32 Countries and set up a successful base for the company all around the world. Currently managing Indosol Exports with sales to more then 40 countries Globally.",
+      image: "/images/Home/PERS2.png",
     },
   ];
 
@@ -311,8 +311,7 @@ export default function LeadershipSection() {
             className="text-[#7b8494] mt-[2rem] max-w-[24rem]"
             style={{ opacity: 0 }}
           >
-            Discover the professionals propelling novelty, strategic thinking,
-            and exceptional execution in each task.
+           Meet the experienced professionals driving Indosol Exports' global reach, quality standards, and trusted partnerships across 40+ countries.
           </p>
 
           {/* <button
@@ -337,15 +336,15 @@ export default function LeadershipSection() {
               style={{ opacity: 0, willChange: "transform" }}
             >
               {/* Image Card */}
-              <div className="relative bg-white rounded-[1.4rem] aspect-square overflow-hidden border bg-amber-200 border-[#ececec] group">
+              <div className="relative bg-white rounded-[1.4rem] aspect-square overflow-hidden border flex justify-center items-center bg-amber-200 border-[#ececec] group">
                <img
   src={member.image}
   alt={member.name}
  className={`
-  w-full 
+
   h-full
   object-cover 
-  object-top   
+  object-center  
   grayscale
   hover:grayscale-0
   duration-500
@@ -406,11 +405,11 @@ export default function LeadershipSection() {
                   <h2 className="text-[1.3rem] font-medium TextDarkGray">
                     {member.name}
                   </h2>
-                  <p className="TextLiteGray mt-[0.4rem]">{member.role}</p>
+                  <p className="TextLiteGray font-light leading-tight mt-[0.4rem]">{member.role}</p>
                 </div>
 
                 {/* Social Icons */}
-                <div className="flex items-center gap-[0.8rem]">
+                {/* <div className="flex items-center gap-[0.8rem]">
                   <a
                     href="#"
                     className="w-[2rem] h-[2rem] rounded-full border border-[#d7dbe3] flex items-center justify-center text-[0.9rem] text-[#5b6475] hover:bg-[#1450d2] hover:text-white duration-300"
@@ -423,7 +422,7 @@ export default function LeadershipSection() {
                   >
                     <GrFacebookOption />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,21 +14,21 @@ export default function StatsSection() {
   const statsData = [
     {
       number: "25+",
-      title: "Our Experience",
+      title: "Years of Experience",
       description:
-        "Extensive experience exceeding twenty years in global commerce and acquiring high-quality healthcare items.",
+        "Over two decades of expertise in international pharmaceutical trade, sourcing and supplying high-quality APIs, excipients, and packaging materials worldwide.",
     },
     {
       number: "30+",
-      title: "Global Export Network",
+      title: "Countries",
       description:
-        "Providing services to governed and partly governed markets in Asia, Africa, the Middle East, and additional regions.",
+        "Supplying to over 30 countries across Asia, Africa, the Middle East, Latin America, and beyond — backed by strong manufacturer relationships and reliable logistics.",
     },
     {
       number: "4",
-      title: "Quality Certified",
+      title: "ISO 9001 certified",
       description:
-        "Products are sourced exclusively from WHO/GMP compliant manufacturers, supplied through us — an ISO certified, FSSAI approved, and 3-Star Export House recognised by the Government of India.",
+        "ISO 9001 Quality Certified Proudly ISO 9001 certified, ensuring every product and process meets the highest standards of quality management and international compliance.",
     },
   ];
 
@@ -110,6 +111,10 @@ export default function StatsSection() {
                 <p className=" TextLiteGray mt-[1.5rem] max-w-[22rem] mx-auto">
                   {item.description}
                 </p>
+
+                <Link target="blank" href={`/certificates/IE ISO 9001-2015 - 02.04.2028.pdf`} >
+                <p className={`TextBlue font-medium mt-5 hover:underline ${index !== 2 && ' hidden'} tracking-tight select-none cursor-pointer `}> Learn More</p>
+                </Link>
               </div>
             );
           })}

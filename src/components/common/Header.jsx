@@ -541,7 +541,6 @@ export default function Header() {
       <header
         ref={headerRef}
         className="fixed top-0 left-0 z-[999] w-full transition-all duration-300"
-        
       >
         <div className="w-[92vw] max-w-[90rem] mx-auto h-[5rem] md:h-[5.5rem] flex items-center justify-between">
           {/* Logo */}
@@ -577,21 +576,18 @@ export default function Header() {
           </nav>
 
           {/* Right side */}
-          <div className="flex items-center gap-4">
+          <div className="flex  items-center gap-4">
             {/* Desktop CTA */}
-            <div className="hidden md:flex">
+            <div className="hidden md:flex w-[10vw] h-fit flex">
               <Link href="/contact">
-                <button
-                  ref={buttonRef}
-                  className="NavBTBN flex items-center gap-[0.7rem] bg-white text-[#0D40A2] rounded-full pl-[1rem] pr-[0.3rem] py-[0.3rem] overflow-hidden"
-                >
-                  <p className="text-[0.95rem] font-medium">Contact Us</p>
-                  <span
-                    ref={circleRef}
-                    className="BTNinnerCrl w-[1.8rem] h-[1.8rem] rounded-full bg-[#0D40A2] flex items-center justify-center text-white text-[0.75rem]"
-                  >
+                <button ref={buttonRef} className="flex items-center gap-[1rem]  border bg-white border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[0.6rem] duration-300 hover:scale-[1.1] group">
+                  <p className="text-[1rem] TextBlue  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                    Contact Us
+                  </p>
+
+                  <div className="w-[1.5rem] h-[1.5rem] right-0 absolute rounded-full BgBlue text-white flex items-center justify-center text-[0.55rem]transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
                     <FaArrowRight />
-                  </span>
+                  </div>
                 </button>
               </Link>
             </div>

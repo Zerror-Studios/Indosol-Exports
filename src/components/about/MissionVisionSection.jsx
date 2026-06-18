@@ -126,12 +126,7 @@ export default function MissionVisionSection() {
                 ref={missionParaRef}
                 className=" TextLiteGray max-w-[40rem]"
               >
-                To furnish exceptional pharmaceutical products and dependable
-                sourcing approaches through trusted international partnerships,
-                strict regulation compliance, along with customer-oriented
-                export offerings. We pledge to assist healthcare businesses
-                globally by ensuring steady quality, transparent operations,
-                competitive rates, and reliable supply chain administration.
+                To be the most trusted sourcing partner for pharmaceutical manufacturers worldwide by delivering high-quality APIs, excipients, and packaging materials from India. We are committed to building lasting relationships through transparency, regulatory compliance, competitive pricing, and a reliable supply chain that businesses across the globe can depend on.
               </p>
             </div>
           </div>
@@ -154,13 +149,7 @@ export default function MissionVisionSection() {
                 ref={visionParaRef}
                 className=" TextLiteGray max-w-[40rem]"
               >
-                To achieve global recognition as a pharmaceutical export
-                partner renowned for excellence, integrity, and enduring
-                business relationships. Our goal is to reinforce worldwide
-                healthcare supply networks by linking international markets with
-                dependable Indian pharmaceutical manufacturers and promoting
-                sustainable growth, reliability, and innovation in
-                pharmaceutical exports.
+                To be globally recognised as India's preferred pharmaceutical export partner — a bridge between world-class Indian manufacturers and international markets. We aspire to expand our reach, uphold the highest standards of quality and integrity, and help pharmaceutical manufacturers worldwide source smarter, faster, and better.
               </p>
             </div>
 
@@ -170,7 +159,7 @@ export default function MissionVisionSection() {
               className="w-full overflow-hidden rounded-[1.2rem] order-1 lg:order-2"
             >
               <img
-                src={`/images/about/mis2.jpeg`}
+                src={`/images/about/AboutHero.webp`}
                 alt="Vision"
                 className="w-full h-[26rem] object-cover"
               />

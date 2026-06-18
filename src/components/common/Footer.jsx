@@ -175,9 +175,9 @@ export default function Footer() {
             />
 
             <h3 className="text-2xl md:text-[2.2rem] md:leading-[2.8rem] font-medium">
-              Trusted Quality
+              Trusted Quality 
               <br />
-              Global Supply
+              Pharmaceutical Exporter
             </h3>
           </div>
 
