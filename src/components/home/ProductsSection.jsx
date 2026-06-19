@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import { IoAdd } from "react-icons/io5";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -220,7 +221,7 @@ export default function ProductsSection() {
                 Explore All Products
               </span>
 
-              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full bg-white flex items-center justify-center TextBlue text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100 group-hover:rotate-45">
+              <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full bg-white flex items-center justify-center TextBlue text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100 ">
                 <FaArrowRight />
               </div>
             </button>

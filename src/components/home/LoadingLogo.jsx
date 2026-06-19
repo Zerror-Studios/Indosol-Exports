@@ -12,15 +12,15 @@ export default function Loading() {
     PTL.to(logoRef.current,
       {
         opacity: 1,
-        duration: 2,
+        duration: 1,
         scale:1,
         ease: "power1.inOut",
       }
     );
     PTL.to(logoRef.current,
       {
-        delay:1,
-        duration: 2,
+        delay:0.5,
+        duration: 0.7,
         scale:0.7,
         top:'5.5%',
         opacity:0,
@@ -30,7 +30,7 @@ export default function Loading() {
     );
      PTL.to(overlayRef.current,
       {
-        delay:2,
+        delay:0.7,
         opacity: 0,
         duration:0.5,
         ease: "power4.inOut",

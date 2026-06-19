@@ -137,35 +137,67 @@ export default function InternationalMarkets() {
         <div className="flex flex-col xl:flex-row gap-[2.5rem]">
           
           {/* Left Blue Card */}
-          <div
-            ref={cardRef}
-            className="w-full xl:w-[68%] BgBlue rounded-[2rem] p-[3rem] sm:p-[4rem] flex flex-col justify-between min-h-[38rem]"
-          >
-            <h2 className="text-white text-[1.8rem] sm:text-[2rem] lg:text-[2.4rem] leading-[1.55] max-w-[58rem]">
-              Indosol Exports facilitates businesses' pharmaceutical
-              material sourcing effectively, leveraging their strong
-              international presence and substantial trade experience
-              with trustworthy procurement and worldwide logistics
-              assistance
-            </h2>
+         <div
+  ref={cardRef}
+  className={`
+    w-full xl:w-[68%]
+    BgBlue
+    rounded-[1.5rem] sm:rounded-[2rem]
+    p-[2rem] sm:p-[3rem] lg:p-[4rem]
+    flex flex-col justify-between
+    min-h-auto lg:min-h-[38rem]
+  `}
+>
+  <h2 className={`
+    text-white
+    text-[1.5rem] sm:text-[1.8rem] lg:text-[2.4rem]
+    leading-[1.6]
+    max-w-[58rem]
+  `}>
+    Indosol Exports facilitates businesses' pharmaceutical
+    material sourcing effectively, leveraging their strong
+    international presence and substantial trade experience
+    with trustworthy procurement and worldwide logistics
+    assistance
+  </h2>
 
-            {/* Region Buttons */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-[1.5rem] mt-[4rem]">
-              {regions.map((item, index) => (
-                <div
-                  key={index}
-                  ref={(el) => (buttonsRef.current[index] = el)}
-                  className="bg-[#15254b82] rounded-[0.5rem] h-fit py-[1rem] flex items-center justify-center gap-[1rem]"
-                >
-                  <span className="w-[0.7rem] h-[0.7rem] rounded-full bg-white"></span>
+  {/* Region Buttons */}
+  <div className={`
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    lg:grid-cols-3
+    xl:grid-cols-4
+    gap-[1rem] sm:gap-[1.5rem]
+    mt-[2rem] sm:mt-[4rem]
+  `}>
+    {regions.map((item, index) => (
+      <div
+        key={index}
+        ref={(el) => (buttonsRef.current[index] = el)}
+        className={`
+          bg-[#15254b82]
+          rounded-[0.5rem]
+          py-[1rem]
+          px-[1.2rem]
+          flex items-center justify-center
+          gap-[0.8rem]
+        `}
+      >
+        <span className="w-[0.6rem] h-[0.6rem] rounded-full bg-white shrink-0" />
 
-                  <p className="text-white text-[1.4rem] font-medium">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <p className={`
+          text-white
+          text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem]
+          font-medium
+          text-center
+        `}>
+          {item}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* Right Image Card */}
           <div

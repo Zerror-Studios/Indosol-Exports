@@ -159,7 +159,7 @@ export default function MissionVisionSection() {
               className="w-full overflow-hidden rounded-[1.2rem] order-1 lg:order-2"
             >
               <img
-                src={`/images/about/AboutHero.webp`}
+                src={`/images/med.jpeg`}
                 alt="Vision"
                 className="w-full h-[26rem] object-cover"
               />
