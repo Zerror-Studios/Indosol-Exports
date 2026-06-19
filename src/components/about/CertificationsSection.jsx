@@ -204,21 +204,21 @@ export default function CertificationsSection() {
       title: "GMP Documentation Support",
       description:
         "GMP Documentation Support We provide comprehensive GMP documentation for all supplied products, ensuring full regulatory compliance and smooth import approvals in the buyer's country.",
-      link: "",
+      link: "/certificates/JHNH Product Guide 2024 - INDOSOL_compressed.pdf",
     },
     {
       id: "03",
       title: "COA & MSDS Availability",
       description:
         "COA & MSDS Availability Certificate of Analysis and Material Safety Data Sheets are made available for every product, giving our clients complete confidence in quality, safety, and traceability.",
-      link: "",
+      link: "/certificates/IE FSSAI License Valid 04-09-2027.pdf",
     },
     {
       id: "04",
       title: "International Export Compliance",
       description:
         "International Export Compliance We ensure every shipment is backed by accurate and complete export documentation, keeping our clients fully compliant with the regulatory requirements of their respective markets.",
-      link: "",
+      link: "/certificates/IE Export House Certificate 3 star Valid 31-03-2028.pdf",
     },
   ];
 
