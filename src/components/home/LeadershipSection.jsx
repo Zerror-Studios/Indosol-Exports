@@ -485,9 +485,9 @@ export default function LeadershipSection() {
                   <h2 className="text-[1.3rem] font-medium TextDarkGray">
                     {member.name}
                   </h2>
-                  {/* <p className="TextLiteGray font-light leading-tight mt-[0.4rem]">
-                    {member.role}
-                  </p> */}
+                   <span className="text-[#202020]/70 mt-[0.5rem] text-[0.9rem] leading-relaxed">
+                {member.Des}
+              </span>
                 </div>
               </div>
             </div>
