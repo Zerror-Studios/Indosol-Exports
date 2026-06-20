@@ -1,10 +1,10 @@
 export default function ImportCapabilities() {
   const cards = [
-    {
-      title: "APIs & Bulk Drugs",
-      desc: "Sourcing high-quality pharmaceutical ingredients through trusted partnerships with certified and globally recognized manufacturers committed to quality and reliability.",
-      icon: "⌘",
-    },
+    // {
+    //   title: "APIs & Bulk Drugs",
+    //   desc: "Sourcing high-quality pharmaceutical ingredients through trusted partnerships with certified and globally recognized manufacturers committed to quality and reliability.",
+    //   icon: "⌘",
+    // },
     {
       title: "Excipients & Chemicals",
       desc: "Providing excipients, intermediates, and tailor-made chemicals for medicine production requirements.",

@@ -214,7 +214,7 @@ export default function Hero() {
           </span>
           <span className="block overflow-hidden">
             <span ref={line3Ref} className="block will-change-transform">
-              Specialists
+              Distributors
             </span>
           </span>
         </h1>
@@ -224,8 +224,7 @@ export default function Hero() {
           ref={paraRef}
           className="text-white/75 font-light sm:max-w-[35vw] mb-8 mt-2 will-change-transform"
         >
-          Your trusted Indian partner for compliant, high-quality pharmaceutical
-          supplies delivered to markets worldwide.
+          Your trusted Indian partner for compliant, high-quality pharmaceutical products delivered to markets worldwide.
         </p>
 
         {/* CTA Button */}

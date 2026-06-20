@@ -89,7 +89,7 @@ export default function ImportAbout() {
           {/* Left Content */}
           <div className="max-w-[42rem]">
             <h1 ref={headingRef} className=" text-[#374151]">
-              Credible Global Medicine  <br /> Acquisition Partner 
+              About JHNM
             </h1>
             <div className="mt-[3rem] flex flex-col gap-[2rem]">
               <p ref={para1Ref} className="text-[#6b7280]">

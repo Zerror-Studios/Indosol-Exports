@@ -88,13 +88,13 @@ export default function ProjectHome() {
         <div className="max-w-[52rem]">
 
           {/* Eyebrow */}
-          <div
+          {/* <div
             ref={eyebrowRef}
             className="flex items-center gap-[0.6rem] mb-[1.5rem]"
           >
             <div className="w-[0.4rem] h-[0.4rem] rounded-full bg-[#1846b3]" />
             <p className="text-white font-[500] tracking-wide">Projects</p>
-          </div>
+          </div> */}
 
           {/* Main Heading — per-line clip reveal */}
           <h1 className="text-white">

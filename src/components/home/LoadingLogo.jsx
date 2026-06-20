@@ -44,8 +44,10 @@ export default function Loading() {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[2000] w-full h-svh flex items-center  justify-center bg-white "
+      className="fixed inset-0 z-[2000] w-full h-svh flex items-center  justify-center overflow-hidden "
+
     >
+      <video muted autoPlay loop src={`/PRBG.mp4`} className="w-full h-svh object-cover object-center" ></video>
       <img
         ref={logoRef}
         src="/icons/logo.png"

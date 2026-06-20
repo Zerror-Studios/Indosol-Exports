@@ -182,7 +182,7 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <a
               href="https://instagram.com"
               target="_blank"
@@ -200,7 +200,7 @@ export default function Footer() {
             >
               <FaFacebookF />
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Company */}
@@ -260,14 +260,14 @@ export default function Footer() {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 href="/terms-condition"
                 className="hover:text-white transition"
               >
                 Terms & Conditions
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 

@@ -88,26 +88,26 @@ export default function AboutHero() {
         <div className="max-w-[52rem]">
 
           {/* Eyebrow */}
-          <div
+          {/* <div
             ref={eyebrowRef}
             className="flex items-center gap-[0.6rem] mb-[1.5rem]"
           >
             <div className="w-[0.4rem] h-[0.4rem] rounded-full bg-[#1846b3]" />
             <p className="text-white font-[500] tracking-wide">About us</p>
-          </div>
+          </div> */}
 
           {/* Main Heading — per-line clip reveal */}
           <h1 className="text-white ">
             <span className="block overflow-hidden">
               <span ref={line1Ref} className="block will-change-transform">
-                International Drug
+                International pharmaceutical exporter
               </span>
             </span>
-            <span className="block overflow-hidden">
+            {/* <span className="block overflow-hidden">
               <span ref={line2Ref} className="block will-change-transform">
                 Export Collaborator
               </span>
-            </span>
+            </span> */}
           </h1>
 
           {/* Description */}
@@ -115,8 +115,8 @@ export default function AboutHero() {
             ref={paraRef}
             className="text-white/90 mt-[2rem] max-w-[38rem]"
           >
-            Supplying high-quality APIs, excipients, and healthcare products
-            to regulated and semi-regulated markets worldwide.
+            Supplying high-quality APIs, excipients, and pharmaceutical products
+            to markets worldwide
           </p>
 
         </div>

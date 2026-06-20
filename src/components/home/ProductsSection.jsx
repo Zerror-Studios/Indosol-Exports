@@ -80,7 +80,7 @@ export default function ProductsSection() {
         "Paracetamol BP",
         "Albendazole USP",
       ],
-      image: "/random_video/ae1.mp4",
+      image: "/powder.mp4",
     },
     {
       title: "Excipients",
@@ -107,7 +107,7 @@ export default function ProductsSection() {
         "Plastic spoons / droppers",
         "PVC",
       ],
-      image: "/random_video/ab1.mp4",
+      image: "/pack.mp4",
     },
   ];
 

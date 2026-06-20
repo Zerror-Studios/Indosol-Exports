@@ -260,6 +260,7 @@ export default function AboutSection() {
                   key={index}
                   className={` text-[#ffffff]  relative z-90
                     ${
+                      word === "Active" ||
                       word === "Pharmaceutical" ||
                       word === "Ingredients" ||
                       word === "(APIs),"
@@ -273,6 +274,7 @@ export default function AboutSection() {
                   key={index}
                   className={`heading-word text-[#b0b0b0] absolute top-0 left-0 z-99
                     ${
+                      word === "Active" ||
                       word === "Pharmaceutical" ||
                       word === "Ingredients" ||
                       word === "(APIs),"
@@ -311,7 +313,7 @@ export default function AboutSection() {
             </h3>
 
             <p className="card-desc text-[1.1rem] leading-[2rem] text-[#6B7280] mt-[1rem]">
-              Extensive experience exceeding twenty years in global commerce and
+              Extensive experience exceeding twenty five  in global commerce and
               acquiring high-quality healthcare items.
             </p>
           </div>

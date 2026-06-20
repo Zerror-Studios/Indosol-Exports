@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,18 +124,17 @@ export default function ContactSection() {
       ref={sectionRef}
       className="w-full bg-[#f4f4f4] py-[6rem] pt-[10vw] overflow-hidden max-sm:pt-[15vh] relative"
     >
-
       <div className="w-full h-[10vh] bg-gradient-to-b absolute top-0 left-0 from-black/30 to-transparent"></div>
       <div className="w-[90vw] max-w-[90rem] mx-auto">
         {/* Top Content */}
-        <div className="contact-top w-full border-b border-[#dddddd] pb-[4rem]">
-          <div className="flex items-center gap-[0.6rem] mb-[1.2rem]">
+        <div className="contact-top w-full  border-[#dddddd] pb-[4rem]">
+          {/* <div className="flex items-center gap-[0.6rem] mb-[1.2rem]">
             <div className="w-[0.4rem] h-[0.4rem] bg-[#1846b3]" />
 
             <p className="text-[0.95rem] font-[500] text-[#374151]">
               Contact us
             </p>
-          </div>
+          </div> */}
 
           <h1 className="TextDarkGray max-w-[42rem]">
             Trusted Export Support Starts Here
@@ -142,8 +142,8 @@ export default function ContactSection() {
 
           <p className="leading-[2rem] TextLiteGray max-w-[48rem] mt-[1.8rem]">
             Connect with our team for reliable pharmaceutical sourcing,
-            regulatory support, and seamless global export solutions tailored
-            to your business needs.
+            regulatory support, and seamless global export solutions tailored to
+            your business needs.
           </p>
         </div>
 
@@ -155,8 +155,9 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.6rem]">
                 {/* First Name */}
                 <div className="input-field w-full">
-                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem]">
+                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem] flex gap-2">
                     First Name
+                    <span className="text-red-500">*</span>
                   </label>
 
                   <input
@@ -170,6 +171,7 @@ export default function ContactSection() {
                 <div className="input-field w-full">
                   <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem]">
                     Last Name
+
                   </label>
 
                   <input
@@ -181,8 +183,9 @@ export default function ContactSection() {
 
                 {/* Number */}
                 <div className="input-field w-full">
-                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem]">
-                    Number
+                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem] flex gap-2">
+                    Phone Number
+                    <span className="text-red-500">*</span>
                   </label>
 
                   <input
@@ -194,8 +197,9 @@ export default function ContactSection() {
 
                 {/* Email */}
                 <div className="input-field w-full">
-                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem]">
+                  <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem] flex gap-2">
                     Email
+                    <span className="text-red-500">*</span>
                   </label>
 
                   <input
@@ -208,8 +212,9 @@ export default function ContactSection() {
 
               {/* Message */}
               <div className="input-field mt-[1.8rem]">
-                <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem]">
+                <label className="block text-[1rem] font-[500] TextBlue mb-[0.8rem] flex gap-2">
                   Message
+                  <span className="text-red-500">*</span>
                 </label>
 
                 <textarea
@@ -219,24 +224,23 @@ export default function ContactSection() {
               </div>
 
               {/* Bottom Text */}
-              <p className="input-field text-[0.95rem] leading-[1.8rem] TextLiteGray mt-[1.8rem] max-w-[36rem]">
-                By submitting this form, you agree to our Privacy Policy and to
+              <div className="input-field text-[0.8rem] leading-[0.9rem] TextLiteGray mt-[1.8rem] max-w-[36rem]">
+                By submitting this form, you agree to our <Link href={`/privacy-policy`}> <span className="TextBlue underline"> Privacy Policy</span> </Link> and to
                 share your interaction data to improve the quality and relevance
                 of this service.
-
-                 <button className=" input-field mt-[2rem] flex items-center gap-[0.8rem] border BgBlue border-[#d1d5db] rounded-full pl-[1.4rem] pr-[0.5rem] py-[0.5rem]  transition-all duration-300">
-                <span className="text-[1rem] font-[600] text-white ">
+              
+                <button className="flex items-center sm:my-5 gap-[1rem] py-[0.8rem] mt-10  BgBlue  rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group">
+                <span className="text-[1rem] text-white  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
                   Submit Message
                 </span>
 
-                <div className="w-[2rem] h-[2rem] rounded-full  flex items-center justify-center bg-white text-[0.8rem] overflow-hidden">
-                  <FaArrowRight className="submit-arrow" />
+                <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full TextBlue bg-white flex items-center justify-center text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
+                  <FaArrowRight />
                 </div>
               </button>
-              </p>
+              </div>
 
               {/* Button */}
-             
             </form>
           </div>
 
@@ -260,8 +264,8 @@ export default function ContactSection() {
                 </h4>
 
                 <p className="text-[1rem] leading-[2rem] TextLiteGray">
-                  804, 8th floor, arcadia building 195 ncpa marg, nariman
-                  point, mumbai - 400 021 , india
+                  804, 8th Floor, Arcadia Building, 195 NCPA Marg, Nariman
+                  Point,Mumbai - 400021, India
                 </p>
 
                 <h4 className="text-[1.2rem] font-[700] TextBlue mt-[2rem] mb-[1rem]">
@@ -269,20 +273,20 @@ export default function ContactSection() {
                 </h4>
 
                 <div className="flex flex-col gap-[0.6rem]">
-  {[
-    "admin@indosolexports.in",
-    "bimal@iscpl.com",
-    "manish0307@gmail.com",
-  ].map((email) => (
-    <a
-      key={email}
-      href={`mailto:${email}`}
-      className="text-[1rem] TextLiteGray hover:underline"
-    >
-      {email}
-    </a>
-  ))}
-</div>
+                  {[
+                    "admin@indosolexports.in",
+                    "bimal@iscpl.com",
+                    "manish0307@gmail.com",
+                  ].map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="text-[1rem] TextLiteGray hover:underline"
+                    >
+                      {email}
+                    </a>
+                  ))}
+                </div>
               </div>
 
               {/* Phone */}
@@ -296,13 +300,9 @@ export default function ContactSection() {
                     +91-22-2287 8889/ 90/ 91
                   </p>
 
-                  <p className="text-[1rem] TextLiteGray">
-                    + 91 98193 88509
-                  </p>
+                  <p className="text-[1rem] TextLiteGray">+ 91 98193 88509</p>
 
-                  <p className="text-[1rem] TextLiteGray">
-                    + 91 98211 64770
-                  </p>
+                  <p className="text-[1rem] TextLiteGray">+ 91 98211 64770</p>
                 </div>
               </div>
             </div>

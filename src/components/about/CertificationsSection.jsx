@@ -204,21 +204,21 @@ export default function CertificationsSection() {
       title: "GMP Documentation Support",
       description:
         "GMP Documentation Support We provide comprehensive GMP documentation for all supplied products, ensuring full regulatory compliance and smooth import approvals in the buyer's country.",
-      link: "/certificates/JHNH Product Guide 2024 - INDOSOL_compressed.pdf",
+      link: "",
     },
     {
       id: "03",
       title: "COA & MSDS Availability",
       description:
         "COA & MSDS Availability Certificate of Analysis and Material Safety Data Sheets are made available for every product, giving our clients complete confidence in quality, safety, and traceability.",
-      link: "/certificates/IE FSSAI License Valid 04-09-2027.pdf",
+      link: "",
     },
     {
       id: "04",
       title: "International Export Compliance",
       description:
         "International Export Compliance We ensure every shipment is backed by accurate and complete export documentation, keeping our clients fully compliant with the regulatory requirements of their respective markets.",
-      link: "/certificates/IE Export House Certificate 3 star Valid 31-03-2028.pdf",
+      link: "",
     },
   ];
 
@@ -239,7 +239,7 @@ export default function CertificationsSection() {
               key={item.id}
               className={`group border-b border-[#dddddd] 
               transition-all duration-500 
-              hover:bg-white hover:px-6 hover:rounded-2xl 
+              hover:bg-white px-6 hover:rounded-2xl 
               ${index === certifications.length - 1 ? "border-b-0" : ""}`}
             >
               <div className="grid grid-cols-1 md:grid-cols-[5rem_18rem_1fr_auto] gap-4 md:gap-8 items-center py-8">

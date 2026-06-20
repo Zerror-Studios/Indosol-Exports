@@ -3,6 +3,7 @@ import ExportHero from '@/components/exports/ExportHero'
 import InternationalHealthcareNetwork from '@/components/exports/InternationalHealthcareNetwork'
 import RegulatoryCompliance from '@/components/exports/RegulatoryCompliance'
 import TrustedManufacturerNetwork from '@/components/exports/TrustedManufacturerNetwork'
+import Map from '@/components/home/Map'
 import React from 'react'
 
 const page = () => {
@@ -10,7 +11,8 @@ const page = () => {
     <>
       <ExportHero />
       <ExportAbout/>
-      <InternationalHealthcareNetwork />
+      {/* <InternationalHealthcareNetwork /> */} 
+      <Map/>
       <TrustedManufacturerNetwork />
       <RegulatoryCompliance />
     </>

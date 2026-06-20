@@ -355,6 +355,7 @@ import { BiSupport } from "react-icons/bi";
 import { CgDisplayFlex } from "react-icons/cg";
 import { IoPricetags } from "react-icons/io5";
 import { AiOutlineGlobal } from "react-icons/ai";
+import { FaDollarSign } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -480,7 +481,7 @@ export default function WhyChooseIndosol() {
             style={{ opacity: 0 }}
           >
             Trusted pharmaceutical export solutions backed by quality,
-            compliance, and global sourcing expertise.
+            compliance, global sourcing expertise and 3 star export house.
           </p>
         </div>
 
@@ -564,7 +565,7 @@ export default function WhyChooseIndosol() {
               >
                 <div>
                   <div className="w-[3.5rem] h-[3.5rem] rounded-[1rem] bg-white flex items-center justify-center transition-all duration-500 ">
-                    <IoPricetags className="text-[#ED3A1C] text-[1.5rem] " />
+                    <FaDollarSign  className="text-[#ED3A1C] text-[1.5rem] " />
                   </div>
                 </div>
 

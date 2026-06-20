@@ -433,7 +433,7 @@ const cards = [
     icon: Boxes,
     title: "One-Stop Sourcing Solutions",
     description:
-      "All-encompassing procurement assistance for APIs, excipients, intermediates, and related healthcare items.",
+      "All-encompassing procurement assistance for APIs, excipients, intermediates, and healthcare items.",
   },
   {
     icon: Truck,

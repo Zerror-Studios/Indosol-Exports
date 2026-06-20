@@ -100,12 +100,12 @@ export default function ImportHero() {
           <h1 className="text-white">
             <span className="block overflow-hidden">
               <span ref={line1Ref} className="block will-change-transform">
-                Universal Drug Sourcing
+                Distributor of excipients in India
               </span>
             </span>
             <span className="block overflow-hidden">
               <span ref={line2Ref} className="block will-change-transform">
-                & Procurement Solutions
+                For JHNH products
               </span>
             </span>
           </h1>

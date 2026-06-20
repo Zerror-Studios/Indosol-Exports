@@ -580,10 +580,10 @@ export default function Header() {
             {/* Desktop CTA */}
             <div className="hidden md:flex w-[10vw] h-fit flex">
               <Link href="/contact">
-                <button ref={buttonRef} className="flex items-center gap-[1rem]  border bg-white border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[0.6rem] duration-300 hover:scale-[1.1] group">
-                  <p className="text-[1rem] TextBlue  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                <button ref={buttonRef} className="flex items-center gap-[1rem]  border bg-white border-[#d9dce3] rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[0.7rem] duration-300 hover:scale-[1.1] group">
+                  <span className="text-[1rem] TextBlue font-medium  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
                     Contact Us
-                  </p>
+                  </span>
 
                   <div className="w-[1.5rem] h-[1.5rem] right-0 absolute rounded-full BgBlue text-white flex items-center justify-center text-[0.55rem]transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
                     <FaArrowRight />

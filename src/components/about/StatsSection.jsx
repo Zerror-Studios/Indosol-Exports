@@ -19,16 +19,28 @@ export default function StatsSection() {
         "Over two decades of expertise in international pharmaceutical trade, sourcing and supplying high-quality APIs, excipients, and packaging materials worldwide.",
     },
     {
-      number: "30+",
+      number: "45+",
       title: "Countries",
       description:
-        "Supplying to over 30 countries across Asia, Africa, the Middle East, Latin America, and beyond — backed by strong manufacturer relationships and reliable logistics.",
+        "Supplying to over 45+ countries across Asia, Africa, the Middle East, Latin America, and beyond — backed by strong manufacturer relationships and reliable logistics.",
     },
     {
-      number: "4",
-      title: "ISO 9001 certified",
-      description:
-        "ISO 9001 Quality Certified Proudly ISO 9001 certified, ensuring every product and process meets the highest standards of quality management and international compliance.",
+      number: "3",
+      title: "Certifications",
+      certifications: [
+        {
+          description: "ISO 9001:2015 Standards",
+          link: `/certificates/IE ISO 9001-2015 - 02.04.2028.pdf`,
+        },
+        {
+          description: "COA & MSDS Availability",
+          link: `/certificates/IE FSSAI License Valid 04-09-2027.pdf`,
+        },
+        {
+          description: "International Export Compliance",
+          link: `/certificates/IE Export House Certificate 3 star Valid 31-03-2028.pdf`,
+        },
+      ],
     },
   ];
 
@@ -54,7 +66,7 @@ export default function StatsSection() {
         const numEl = card.querySelector("[data-count]");
         if (!numEl) return;
 
-        const raw = numEl.getAttribute("data-count");       // e.g. "20", "30", "4"
+        const raw = numEl.getAttribute("data-count"); // e.g. "20", "30", "4"
         const suffix = numEl.getAttribute("data-suffix") || ""; // e.g. "+"
 
         const obj = { val: 0 };
@@ -87,6 +99,8 @@ export default function StatsSection() {
             const numericPart = match ? match[1] : item.number;
             const suffixPart = match ? match[2] : "";
 
+            const isCertificationsCard = Boolean(item.certifications);
+
             return (
               <div
                 key={index}
@@ -103,18 +117,28 @@ export default function StatsSection() {
                 </h1>
 
                 {/* Title */}
-                <h2 className="  TextDarkGray mt-5">
-                  {item.title}
-                </h2>
+                <h2 className="TextDarkGray mt-5">{item.title}</h2>
 
-                {/* Description */}
-                <p className=" TextLiteGray mt-[1.5rem] max-w-[22rem] mx-auto">
-                  {item.description}
-                </p>
-
-                <Link target="blank" href={`/certificates/IE ISO 9001-2015 - 02.04.2028.pdf`} >
-                <p className={`TextBlue font-medium mt-5 hover:underline ${index !== 2 && ' hidden'} tracking-tight select-none cursor-pointer `}> Learn More</p>
-                </Link>
+                {isCertificationsCard ? (
+                  // Certifications list — each with its own description + link
+                  <ul className="mt-[1.5rem] max-w-[22rem] mx-auto space-y-3">
+                    {item.certifications.map((cert, certIndex) => (
+                      <li key={certIndex} className="flex  justify-center gap-2 items-center">
+                        <span className="TextLiteGray">{cert.description}</span>
+                        <Link target="_blank" href={cert.link}>
+                          <span className="TextBlue font-medium mt-1 hover:underline tracking-tight select-none cursor-pointer">
+                            Learn More
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  // Regular stat card — single description, no link
+                  <p className="TextLiteGray mt-[1.5rem] max-w-[22rem] mx-auto">
+                    {item.description}
+                  </p>
+                )}
               </div>
             );
           })}
