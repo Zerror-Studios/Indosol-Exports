@@ -11,9 +11,7 @@ import { createPageMetadata } from "@/lib/seo";
 const HomePage = () => {
   return (
     <>
-
     <LoadingLogo />
-
     <Hero />
     <AboutSection/>
     <ProductsSection />
