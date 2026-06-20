@@ -286,11 +286,13 @@ export default function LeadershipSection() {
       name: "Bimal Shah",
       role: "Experience of more than 29 years in bulk drug manufacturing facility and handled production, quality as well as purchasing of the plant with a manufacturing capacity of 2400 MT Per Annum. Handling marketing of bulk drugs and chemicals.",
       image: "/P1.png",
+      Des:'(Director, Operations & Quality Assurance)'
     },
     {
       name: "Manish Shah",
       role: "Experience of more than 31 years in Bulk Drug Manufacturing Facility and handled marketing quantity of 2400 MT per annum of Sulphamethoxazole, with a spread of 50 countries around the globe and locally to almost all the multinational companies. Visited more then 32 Countries and set up a successful base for the company all around the world. Currently managing Indosol Exports with sales to more then 40 countries Globally.",
       image: "/P2.png",
+      Des:'(Director, Global Sales & Business Development)'
     },
   ];
 
@@ -441,7 +443,7 @@ export default function LeadershipSection() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-full object-cover object-center grayscale hover:grayscale-0 duration-500 relative z-10"
+                  className="h-full w-full object-cover object-top grayscale hover:grayscale-0 duration-500 relative z-10"
                 />
 
                 {/* + Icon Button (bottom-right) */}
@@ -468,10 +470,10 @@ export default function LeadershipSection() {
                     hover:text-white
                     duration-150
                   `}
-                  style={{
-                    opacity: 0,
-                    transform: "translate(20px, 20px) scale(0.5)",
-                  }}
+                  // style={{
+                  //   opacity: 0,
+                  //   transform: "translate(20px, 20px) scale(0.5)",
+                  // }}
                 >
                   <FaPlus />
                 </button>
@@ -515,16 +517,19 @@ export default function LeadershipSection() {
 
           {activeMember && (
             <>
-              <div className="w-[5rem] h-[5rem] rounded-full overflow-hidden mb-[1.5rem] border border-[#ececec]">
+              <div className="w-[5rem] h-[5rem]  overflow-hidden mb-[1.5rem] border border-[#ececec]">
                 <img
                   src={activeMember.image}
                   alt={activeMember.name}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <h2 className="text-[1.6rem] font-medium TextDarkGray">
                 {activeMember.name}
               </h2>
+              <span className="text-[#202020]/70 mt-[0.5rem] leading-relaxed">
+                {activeMember.Des}
+              </span>
               <p className="text-[#7b8494] mt-[1rem] leading-relaxed">
                 {activeMember.role}
               </p>

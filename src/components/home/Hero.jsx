@@ -22,11 +22,12 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       /* 1. Staggered line reveal */
       gsap.from([line1Ref.current, line2Ref.current, line3Ref.current], {
+        delay:2.7,
         yPercent: 110,
         duration: 1.05,
         ease: "power4.out",
         stagger: 0.13,
-        delay: 0.2,
+        
       });
 
       /* 2. Paragraph fade + rise */
@@ -35,16 +36,17 @@ export default function Hero() {
         y: 22,
         duration: 0.85,
         ease: "power3.out",
-        delay: 0.72,
+        delay:2.7,
       });
 
       /* 3. CTA fade + rise */
       gsap.from(ctaRef.current, {
+
         opacity: 0,
         y: 18,
         duration: 0.75,
         ease: "power3.out",
-        delay: 0.92,
+        delay:2.7,
       });
 
       /* 4. BG subtle scale-in */
