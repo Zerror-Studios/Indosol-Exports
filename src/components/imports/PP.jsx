@@ -251,7 +251,7 @@ export default function PP() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-[7rem]">
+    <section className="w-full bg-white py-16 md:py-[7rem] border-t border-[#dfdfdf]">
       <div className="w-[90vw] mx-auto">
         {/* Heading */}
         <div className="text-center mb-12 md:mb-[5rem]">
@@ -269,7 +269,7 @@ export default function PP() {
             return (
               <div
                 key={index}
-                className="bg-[#F8F8F8] border border-[#dfdfdf] rounded-[1rem] overflow-hidden"
+                className="bg-[#F8F8F8] border border-[#dfdfdf] rounded-[1rem] overflow-hidden "
               >
                 {/* Accordion Header */}
                 <button
