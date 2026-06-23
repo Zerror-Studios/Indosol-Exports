@@ -196,7 +196,7 @@ export default function ServicesSection() {
     {
       icon: <FiTruck />,
       title: "Global Logistics Support",
-      desc: "End-to-end logistics planning including palletisation, fumigation, freight coordination, and timely delivery to over 40 countries.",
+      desc: "End-to-end logistics planning including palletisation, fumigation, freight coordination, and timely delivery to over 45 countries.",
     },
     {
       icon: <FiLayers />,
