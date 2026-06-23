@@ -209,7 +209,6 @@ export default function ServicesSection() {
       desc: "Authorised distributor of J H Nanhang (JHNH) excipients — Povidone, Crospovidone, and Copovidone — for domestic pharmaceutical, food, and cosmetic industries.",
     },
   ];
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(imgRef.current, {
