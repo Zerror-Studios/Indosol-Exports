@@ -286,13 +286,13 @@ export default function LeadershipSection() {
       name: "Bimal Shah",
       role: "Experience of more than 29 years in bulk drug manufacturing facility and handled production, quality as well as purchasing of the plant with a manufacturing capacity of 2400 MT Per Annum. Handling marketing of bulk drugs and chemicals.",
       image: "/P1.png",
-      Des:'(Director, Operations & Quality Assurance)'
+      Des:'( Partner )'
     },
     {
       name: "Manish Shah",
       role: "Experience of more than 31 years in Bulk Drug Manufacturing Facility and handled marketing quantity of 2400 MT per annum of Sulphamethoxazole, with a spread of 50 countries around the globe and locally to almost all the multinational companies. Visited more then 32 Countries and set up a successful base for the company all around the world. Currently managing Indosol Exports with sales to more then 40 countries Globally.",
       image: "/P2.png",
-      Des:'(Director, Global Sales & Business Development)'
+      Des:'( Partner )'
     },
   ];
 

@@ -95,7 +95,7 @@ export default function AboutSection() {
               <p ref={para1Ref} className="TextLiteGray">
                 Indosol Exports is a Mumbai-based pharmaceutical export company specializing in APIs, excipients, and packaging materials. With more than two decades of international trade expertise, the company supplies pharmaceutical-grade materials to customers across Asia, Africa, the Middle East, Europe, and other international markets. <br/><br/>
 Expanding beyond exports, Indosol Exports is now the authorised Pan India distributor of J H Nanhang (JHNH) products — Povidone, Crospovidone, and Copovidone — effective December 2025. This strategic partnership strengthens our presence in the domestic pharmaceutical, food, and cosmetic industries, enabling us to serve Indian manufacturers with the same reliability and quality we deliver globally.
-By working alongside prominent Indian manufacturers and preserving strong worldwide associations, the company delivers reliable supply solutions with consistent quality, competitive costs, and compliance with regulations.
+By working alongside prominent Indian manufacturers and maintaining strong global partnership, the company delivers reliable supply solutions with consistent quality, competitive costs, and compliance with regulations.
               </p>
               
             </div>
