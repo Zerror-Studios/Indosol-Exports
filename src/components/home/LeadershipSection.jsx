@@ -422,7 +422,7 @@ export default function LeadershipSection() {
           >
             Meet the experienced professionals driving Indosol Exports'
             global reach, quality standards, and trusted partnerships across
-            40+ countries.
+            45+ Countries.
           </p>
         </div>
 

@@ -93,7 +93,8 @@ export default function ExportAbout() {
             </h1>
             <div className="mt-[3rem] flex flex-col gap-[2rem]">
               <p ref={para1Ref} className="text-[#6b7280]">
-                Indosol Exports supplies APIs, excipients, intermediates, and allied healthcare products to customers across global regulated and semi-regulated markets. Backed by trusted Indian manufacturing partnerships and strong international logistics support, the company delivers reliable sourcing and export solutions tailored for global healthcare businesses.
+                Indosol Exports supplies APIs, excipients, intermediates, and packaging materials to customers across global markets, with regular shipments to over 45 countries spanning Africa, the Middle East, Asia, Europe, and others.  <br/><br/>
+                Backed by trusted Indian manufacturing partnerships and strong international logistics support, the company manages the full export process — including documentation, factory visits, palletisation, fumigation, and certification — ensuring reliable sourcing and time-bound delivery for global healthcare businesses.
               </p>
               {/* <p ref={para2Ref} className="text-[#6b7280]">
                 By working alongside prominent Indian manufacturers and

@@ -61,7 +61,7 @@ export default function PP() {
 
   const categories = [
     {
-      title: "Active Pharmaceutical Ingredients (API)",
+      title: "Active Pharmaceutical Ingredients (APIs)",
       products: [
         ["Albendazole"],
         ["Allopurinol USP"],

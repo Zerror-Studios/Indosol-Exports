@@ -180,7 +180,7 @@ export default function Loading() {
 
     // Fade the map background in to its target opacity (0.25)
     tl.to(bg, {
-      opacity: 0.25,
+      opacity: 0.10,
       duration: 0.5,
       ease: "power2.out",
     });
@@ -231,7 +231,7 @@ export default function Loading() {
     >
       <img
         ref={bgRef}
-        src="/mapM1.png"
+        src="/MDP.png"
         alt="background map"
         className="w-full h-full object-cover object-center opacity-0"
       />

@@ -61,7 +61,7 @@ export default function PharmaProducts() {
 
   const categories = [
     {
-      title: "Active Pharmaceutical Ingredients (API)",
+      title: "Active Pharmaceutical Ingredients (APIs)",
       products: [
         ["Albendazole"],
         ["Allopurinol USP"],
@@ -150,17 +150,17 @@ export default function PharmaProducts() {
       ],
     },
 
-    {
-      title: "JH Nanhang Life Sciences Products",
-      products: [
-        ["Copovidone VA64 (PVP/VA64)"],
-        ["Crospovidone XL 10 Type B Grade"],
-        ["Crospovidone XL Type A Grade"],
-        ["Povidone K 15"],
-        ["Povidone K 30 USP"],
-        ["Povidone K 90 USP"],
-      ],
-    },
+    // {
+    //   title: "JH Nanhang Life Sciences Products",
+    //   products: [
+    //     ["Copovidone VA64 (PVP/VA64)"],
+    //     ["Crospovidone XL 10 Type B Grade"],
+    //     ["Crospovidone XL Type A Grade"],
+    //     ["Povidone K 15"],
+    //     ["Povidone K 30 USP"],
+    //     ["Povidone K 90 USP"],
+    //   ],
+    // },
 
     {
       title: "Hormones",

@@ -88,33 +88,31 @@ export default function ImportHero() {
       <div className="relative z-10 w-[90vw] max-w-[90rem] mx-auto h-full flex items-center">
         <div className="max-w-[52rem]">
           {/* Eyebrow */}
-          <div
+          {/* <div
             ref={eyebrowRef}
             className="flex items-center gap-[0.6rem] mb-[1.5rem]"
           >
             <div className="w-[0.4rem] h-[0.4rem] rounded-full bg-[#1846b3]" />
             <p className="text-white font-[500] tracking-wide">Imports</p>
-          </div>
+          </div> */}
 
           {/* Main Heading — per-line clip reveal */}
           <h1 className="text-white">
             <span className="block overflow-hidden">
               <span ref={line1Ref} className="block will-change-transform">
-                Distributor of excipients in India
+                JH Nanhang (JHNH) Lifesciences products
               </span>
             </span>
             <span className="block overflow-hidden">
-              <span ref={line2Ref} className="block will-change-transform">
+              {/* <span ref={line2Ref} className="block will-change-transform">
                 For JHNH products
-              </span>
+              </span> */}
             </span>
           </h1>
 
           {/* Description */}
           <p ref={paraRef} className="text-white/90 mt-[2rem] max-w-[38rem]">
-            Reliable sourcing and import support for APIs, excipients,
-            intermediates, and pharmaceutical raw materials from trusted global
-            manufacturers.
+            Authorized distributor of JH Nanhang Life Sciences (JHNH) excipients in India — Povidone, Copovidone, and Crospovidone, backed by direct manufacturer support from China
           </p>
 
           <Link href={`/certificates/JHNH Product Guide 2024 - INDOSOL_compressed.pdf`} target="blank">

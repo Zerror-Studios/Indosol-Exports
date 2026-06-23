@@ -107,7 +107,7 @@ export default function ProductsSection() {
         "Plastic spoons / droppers",
         "PVC",
       ],
-      image: "/pack.mp4",
+      image: "/Pack.mp4",
     },
   ];
 

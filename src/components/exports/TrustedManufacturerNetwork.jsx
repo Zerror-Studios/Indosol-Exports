@@ -418,11 +418,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
-    icon: Globe,
-    title: "Global Export Expertise",
-    description:
-      "More than 20 years of experience in international pharmaceutical trade and merchant exporting activities.",
-  },
+  icon: Globe,
+  title: "Global Export Expertise",
+  description:
+    "More than 25+ years of experience in international pharmaceutical trade, merchant exporting activities, and worldwide distribution solutions.",
+},
   {
     icon: ShieldCheck,
     title: "Trusted Manufacturer",

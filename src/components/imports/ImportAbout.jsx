@@ -83,17 +83,19 @@ export default function ImportAbout() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#ffffff] py-[7rem] overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-[#ffffff]  overflow-hidden">
       <div className="w-[90vw] max-w-[90rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vw] items-center">
           {/* Left Content */}
           <div className="max-w-[42rem]">
             <h1 ref={headingRef} className=" text-[#374151]">
-              About JHNM
+              About JHNH
             </h1>
             <div className="mt-[3rem] flex flex-col gap-[2rem]">
               <p ref={para1Ref} className="text-[#6b7280]">
-                Indosol Exports specializes in pharmaceutical sourcing and import support for APIs, excipients, intermediates, and allied healthcare products. With decades of international trade experience and strong manufacturer relationships, we help businesses streamline procurement, ensure regulatory compliance, and secure consistent product supply across global markets.
+                JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading manufacturer of Povidone (PVP) and Polyvinylpolypyrrolidone (PVPP) in China, with an annual production capacity of 5,000 MT. Headquartered in Shanghai with its manufacturing facility located in Quzhou, Zhejiang — just two hours from Shanghai — JHNH operates a state-of-the-art plant that meets international standards for quality and safety, including GMP compliance and ISO 9001 & ISO 14001 certification. The company holds key regulatory approvals such as DMF, CEP, FDA Registration, KOSHER, and HALAL, with products conforming to current USP, EP, JP, BP, and IP pharmacopoeial standards.
+
+JHNH's facility has been successfully audited by numerous multinational pharmaceutical companies, with independent audit reports available on request. Its product portfolio spans Povidone, Copovidone, Crospovidone, N-Vinylpyrrolidone (NVP), 2-Pyrrolidone, and Povidone-Iodine, serving applications across pharmaceuticals, personal care.
               </p>
               {/* <p ref={para2Ref} className="text-[#6b7280]">
                 By working alongside prominent Indian manufacturers and
@@ -109,7 +111,7 @@ export default function ImportAbout() {
             <div className="w-full overflow-hidden rounded-[1.2rem]">
               <img
                 ref={imageRef}
-                src={`/images/imports/i2.webp`}
+                src={`/images/JHNH.jpg`}
                 alt="About Indosol Exports"
                 className="w-full h-[32rem] object-cover"
               />

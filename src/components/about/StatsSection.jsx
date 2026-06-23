@@ -33,11 +33,11 @@ export default function StatsSection() {
           link: `/certificates/IE ISO 9001-2015 - 02.04.2028.pdf`,
         },
         {
-          description: "COA & MSDS Availability",
+          description: "FSSAI Certification",
           link: `/certificates/IE FSSAI License Valid 04-09-2027.pdf`,
         },
         {
-          description: "International Export Compliance",
+          description: "3 Star Export House",
           link: `/certificates/IE Export House Certificate 3 star Valid 31-03-2028.pdf`,
         },
       ],
@@ -121,7 +121,7 @@ export default function StatsSection() {
 
                 {isCertificationsCard ? (
                   // Certifications list — each with its own description + link
-                  <ul className="mt-[1.5rem] max-w-[22rem] mx-auto space-y-3">
+                  <ul className="mt-[1.5rem] max-w-[22rem] mx-auto space-y-1">
                     {item.certifications.map((cert, certIndex) => (
                       <li key={certIndex} className="flex  justify-center gap-2 items-center">
                         <span className="TextLiteGray">{cert.description}</span>
