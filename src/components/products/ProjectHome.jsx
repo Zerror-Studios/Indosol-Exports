@@ -115,7 +115,7 @@ export default function ProjectHome() {
             ref={paraRef}
             className="text-white/90 mt-[2rem] max-w-[38rem]"
           >
-            Supplying high-quality APIs, excipients, intermediates, and healthcare products to regulated and semi-regulated markets worldwide.
+            Supplying high-quality APIs, excipients, intermediates, and packaging materials to global markets worldwide.
           </p>
 
         </div>

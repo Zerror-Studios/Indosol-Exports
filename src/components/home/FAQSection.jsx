@@ -284,7 +284,7 @@ export default function FAQSection() {
     {
       question: "Which countries does Indosol Exports supply to?",
       answer:
-        "We export to over 40 countries across Africa, Asia, Latin America, the Middle East, and other global markets. With more than two decades of experience in international pharmaceutical trade, we have built a strong and trusted global clientele.",
+        "We export to over 45 countries across Africa, Asia, Latin America, the Middle East, and other global markets. With more than two decades of experience in international pharmaceutical trade, we have built a strong and trusted global clientele.",
     },
     {
       question: "How does Indosol Exports ensure the quality of its products?",

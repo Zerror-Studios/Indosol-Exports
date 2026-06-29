@@ -679,7 +679,7 @@ const Map = () => {
   useSplitTextMaskAnimation([titleRef]);
 
   return (
-    <div className="MapTopMainCont relative h-[400svh] max-sm:h-fit w-full bg-white">
+    <div className="MapTopMainCont relative h-[400svh] max-sm:h-fit w-full bg-white border-t border-[#dfdfdf]">
       <div className="sticky top-0 left-0 w-full h-svh flex items-end overflow-hidden">
         <div className="absolute top-[3%] left-0 z-20 max-sm:hidden flex w-full items-center justify-center capitalize">
           <div className="relative flex h-[30vh] w-full items-center justify-center">
