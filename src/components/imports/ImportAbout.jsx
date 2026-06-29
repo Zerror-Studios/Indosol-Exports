@@ -92,8 +92,8 @@ export default function ImportAbout() {
               About JHNH
             </h1>
             <div className="mt-[3rem] flex flex-col gap-[2rem]">
-              <p ref={para1Ref} className="text-[#6b7280]">
-                JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading manufacturer of Povidone (PVP) and Polyvinylpolypyrrolidone (PVPP) in China, with an annual production capacity of 5,000 MT. Headquartered in Shanghai with its manufacturing facility located in Quzhou, Zhejiang — just two hours from Shanghai — JHNH operates a state-of-the-art plant that meets international standards for quality and safety, including GMP compliance and ISO 9001 & ISO 14001 certification. The company holds key regulatory approvals such as DMF, CEP, FDA Registration, KOSHER, and HALAL, with products conforming to current USP, EP, JP, BP, and IP pharmacopoeial standards.
+              <p ref={para1Ref} className="text-[#6b7280] leading-[1.5rem]!">
+                JH Nanhang Life Sciences Co., Ltd. (JHNH) is a leading manufacturer of Povidone (PVP) and Polyvinylpolypyrrolidone (PVPP) in China, with an annual production capacity of 5,000 MT. Headquartered in Shanghai with its manufacturing facility located in Quzhou, Zhejiang — just two hours from Shanghai — JHNH operates a state-of-the-art plant that meets international standards for quality and safety, including GMP compliance and ISO 9001 & ISO 14001 certification. <br/> The company holds key regulatory approvals such as DMF, CEP, FDA Registration, KOSHER, and HALAL, with products conforming to current USP, EP, JP, BP, and IP pharmacopoeial standards.
 
 JHNH's facility has been successfully audited by numerous multinational pharmaceutical companies, with independent audit reports available on request. Its product portfolio spans Povidone, Copovidone, Crospovidone, N-Vinylpyrrolidone (NVP), 2-Pyrrolidone, and Povidone-Iodine, serving applications across pharmaceuticals, personal care.
               </p>
