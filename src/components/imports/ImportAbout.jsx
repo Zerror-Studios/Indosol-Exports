@@ -83,7 +83,7 @@ export default function ImportAbout() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#F5F5F5]  overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-[#F5F5F5]  overflow-hidden py-5">
       <div className="w-[90vw] max-w-[90rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vw] items-center">
           {/* Left Content */}
@@ -108,12 +108,12 @@ JHNH's facility has been successfully audited by numerous multinational pharmace
 
           {/* Right Image */}
           <div ref={imageWrapperRef} className="w-full ">
-            <div className="w-full overflow-hidden rounded-[1.2rem] ">
+            <div className="w-full overflow-hidden rounded-[1.2rem] bg-white ">
               <img
                 ref={imageRef}
                 src={`/images/JHNH_PNG.png`}
                 alt="About Indosol Exports"
-                className="w-full h-[32rem] object-cover"
+                className="w-full h-[30rem] object-cover"
               />
             </div>
           </div>

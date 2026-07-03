@@ -228,7 +228,7 @@ export default function RegulatoryCompliance() {
               {/* image itself */}
               <div ref={imageRef} style={{ width: "100%", height: "100%" }}>
                 <Image
-                  src="/images/export/EXP.jpeg"
+                  src="/DOC.jpg"
                   alt="Regulatory Compliance"
                   fill
                   className="object-cover"
