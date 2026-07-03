@@ -274,9 +274,9 @@ export default function ContactSection() {
 
                 <div className="flex flex-col gap-[0.6rem]">
                   {[
-                    "admin@indosolexports.in",
                     "bimal@iscpl.com",
-                    "manish0307@gmail.com",
+                    "mshah0307@gmail.com",
+                    "admin@indosolexports.in",
                   ].map((email) => (
                     <a
                       key={email}

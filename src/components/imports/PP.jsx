@@ -251,7 +251,7 @@ export default function PP() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-[7rem] border-t border-[#dfdfdf]">
+    <section className="w-full bg-white py-16 md:py-[7rem]">
       <div className="w-[90vw] mx-auto">
         {/* Heading */}
         <div className="text-center mb-12 md:mb-[5rem]">

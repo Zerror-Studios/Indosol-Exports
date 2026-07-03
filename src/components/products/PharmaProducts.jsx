@@ -65,7 +65,7 @@ export default function PharmaProducts() {
       products: [
         ["Albendazole"],
         ["Allopurinol USP"],
-        ["Ambroxol HCL BP"],
+        ["Ambroxol HCL "],
         ["Amitriptyline HCL"],
         ["Amoxicillin Trihydrate"],
         ["Ampicillin Trihydrate"],
@@ -79,7 +79,7 @@ export default function PharmaProducts() {
         ["Cetirizine Di HCL"],
         ["Chlorhexidine Gluconate 20% Solution"],
         ["Chloroquine Phosphate"],
-        ["Ciprofloxacin HCL BP"],
+        ["Ciprofloxacin HCL "],
         ["Cloxacillin Sodium"],
         ["Colchicine"],
         ["Cyproheptadine HCL"],

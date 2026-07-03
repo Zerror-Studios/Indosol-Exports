@@ -25,13 +25,13 @@ export default function ProductsSection() {
   //     description:
   //       "High-quality APIs sourced and supplied to meet global pharmaceutical standards with reliable and scalable supply.",
   //     tags: [
-  //       "Amoxicillin THD BP compacted and powder",
-  //       "Ampicillin THD BP compact and powder",
-  //       "Ibuprofen BP",
-  //       "Mebendazole Off white USP and Poly C BP grade",
+  //       "Amoxicillin THD  compacted and powder",
+  //       "Ampicillin THD  compact and powder",
+  //       "Ibuprofen ",
+  //       "Mebendazole Off white USP and Poly C  grade",
   //       "Ketoconazole USP",
   //       "Metformin HCL",
-  //       "Paracetamol BP",
+  //       "Paracetamol ",
   //       "Albendazole USP",
   //     ],
   //     image: "/random_video/ah1.mp4",
@@ -71,13 +71,13 @@ export default function ProductsSection() {
       description:
         "We provide a comprehensive portfolio of Active Pharmaceutical Ingredients (APIs) manufactured to meet international quality standards. Our products are sourced from trusted partners, ensuring consistent quality, regulatory compliance, and a dependable supply chain for pharmaceutical manufacturers worldwide.",
       tags: [
-        "Amoxicillin THD BP compacted and powder",
-        "Ampicillin THD BP compact and powder",
-        "Ibuprofen BP",
-        "Mebendazole Off white USP and Poly C BP grade",
+        "Amoxicillin THD  compacted and powder",
+        "Ampicillin THD  compact and powder",
+        "Ibuprofen ",
+        "Mebendazole Off white USP and Poly C  grade",
         "Ketoconazole USP",
         "Metformin HCL",
-        "Paracetamol BP",
+        "Paracetamol ",
         "Albendazole USP",
       ],
       image: "/powder.mp4",
@@ -107,7 +107,7 @@ export default function ProductsSection() {
         "Plastic spoons / droppers",
         "PVC",
       ],
-      image:"/random_video/Pack.mp4",
+      image:"/random_video/FillUp.mp4",
     },
   ];
 

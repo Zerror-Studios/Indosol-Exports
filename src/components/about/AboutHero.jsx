@@ -73,7 +73,7 @@ export default function AboutHero() {
         alt="About Banner"
         className="  w-full h-full object-cover"
       /> */}
-       <video src={`/random_video/ab1.mp4`} loop muted autoPlay 
+       <video src={`/random_video/SHIP.mp4`} loop muted autoPlay 
          className="w-full h-full object-cover inset-0 top-0 left-0  absolute object-center"
         ></video>
 
