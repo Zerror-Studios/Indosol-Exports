@@ -110,7 +110,7 @@ export default function ExportAbout() {
             <div className="w-full overflow-hidden rounded-[1.2rem]">
               <img
                 ref={imageRef}
-                src={`/images/about/AboutAboutImg.webp`}
+                src={`/EEE.webp`}
                 alt="About Indosol Exports"
                 className="w-full h-[32rem] object-cover"
               />
