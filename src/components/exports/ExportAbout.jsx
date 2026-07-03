@@ -96,12 +96,7 @@ export default function ExportAbout() {
                 Indosol Exports supplies APIs, excipients, intermediates, and packaging materials to customers across global markets, with regular shipments to over 45 countries spanning Africa, the Middle East, Asia, Europe, and others.  <br/><br/>
                 Backed by trusted Indian manufacturing partnerships and strong international logistics support, the company manages the full export process — including documentation, factory visits, palletisation, fumigation, and certification — ensuring reliable sourcing and time-bound delivery for global healthcare businesses.
               </p>
-              {/* <p ref={para2Ref} className="text-[#6b7280]">
-                By working alongside prominent Indian manufacturers and
-                preserving strong worldwide associations, the company delivers
-                reliable supply solutions with consistent quality, competitive
-                costs, and compliance with regulations.
-              </p> */}
+             
             </div>
           </div>
 
