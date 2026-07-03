@@ -6,6 +6,7 @@ import InternationalMarkets from '@/components/imports/InternationalMarkets'
 import PP from '@/components/imports/PP'
 import SupplyChainSection from '@/components/imports/SupplyChainSection'
 import PharmaProducts from '@/components/products/PharmaProducts'
+import { createPageMetadata } from '@/lib/seo'
 import React from 'react'
 
 const page = () => {
@@ -23,3 +24,7 @@ const page = () => {
 }
 
 export default page
+
+export async function generateMetadata() {
+  return createPageMetadata("/imports");
+}

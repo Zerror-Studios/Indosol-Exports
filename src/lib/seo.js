@@ -69,9 +69,11 @@ export function createMetadata({
       images: [imageUrl],
     },
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
+      icon: siteConfig.favicon,
+      shortcut: siteConfig.favicon,
+      apple: siteConfig.appleTouchIcon,
     },
+    manifest: siteConfig.manifest,
     other: {
       image_src: imageUrl,
     },

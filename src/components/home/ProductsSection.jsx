@@ -242,10 +242,10 @@ export default function ProductsSection() {
                 style={{ opacity: 0, willChange: "transform" }}
               >
                 <div>
-                  <h5 className="text-white text-[2rem] md:text-[2.5rem] ">
+                  <h5 className="text-white text-[2rem] md:text-[2.5rem]  ">
                     {item.title}
                   </h5>
-                  <p className="text-white/70 mt-2 max-w-[42rem]">
+                  <p className="text-white/70 mt-2 max-w-[42rem] text-justify">
                     {item.description}
                   </p>
                 </div>

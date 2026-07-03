@@ -477,7 +477,7 @@ export default function WhyChooseIndosol() {
 
           <p
             ref={subheadingRef}
-            className="text-[#6b7280] mt-[1.2rem] max-w-[42rem] mx-auto"
+            className="text-[#6b7280] mt-[1.2rem] max-w-[42rem] mx-auto "
             style={{ opacity: 0 }}
           >
             Trusted pharmaceutical export solutions backed by quality,
@@ -506,7 +506,7 @@ export default function WhyChooseIndosol() {
                     Quality Assurance
                   </h3>
 
-                  <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                  <span className="text-[1rem] text-[#6b7280] text-justify mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
                     Products sourced from trusted manufacturers with
                     complete documentation.
                   </span>
@@ -528,7 +528,7 @@ export default function WhyChooseIndosol() {
                     Regulatory Support
                   </h3>
 
-                  <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                  <span className="text-[1rem] text-justify text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
                     Providing COA, MSDS, GMP, and complete import clearance
                     documentation.
                   </span>
@@ -552,7 +552,7 @@ export default function WhyChooseIndosol() {
                   Wide Product Range
                 </h3>
 
-                <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                <span className="text-[1rem] text-[#6b7280] text-justify mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
                   Extensive range of quality pharmaceutical products.
                 </span>
               </div>
@@ -574,7 +574,7 @@ export default function WhyChooseIndosol() {
                     Competitive Pricing
                   </h3>
 
-                  <span className="text-[1rem] leading-[1.6rem] text-[#6b7280] mt-2 flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                  <span className="text-[1rem] leading-[1.6rem] text-justify text-[#6b7280] mt-2 flex transition-all duration-500 group-hover:text-[#dbe4ff]">
                     Manufacturer partnerships guarantee pharma-level quality at
                     optimal pricing.
                   </span>
@@ -595,7 +595,7 @@ export default function WhyChooseIndosol() {
                   Global Reach
                 </h3>
 
-                <span className="text-[1rem] text-[#6b7280] mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
+                <span className="text-[1rem] text-[#6b7280] text-justify mt-[1rem] flex transition-all duration-500 group-hover:text-[#dbe4ff]">
                  Supplying trusted healthcare products worldwide.
                 </span>
               </div>

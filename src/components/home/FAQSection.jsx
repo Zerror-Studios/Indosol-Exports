@@ -416,7 +416,7 @@ export default function FAQSection() {
         mt-3
         sm:mt-6
         lg:mt-10
-        max-w-[420px]
+        max-w-[420px] text-justify
       `}
             >
               Answers to common questions about our products, quality standards,
@@ -504,7 +504,7 @@ export default function FAQSection() {
                     sm:text-base
                     lg:text-lg
                     leading-relaxed
-                    max-w-[700px]
+                    max-w-[700px] text-justify
                   `}
                     >
                       {item.answer}

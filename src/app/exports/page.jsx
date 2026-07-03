@@ -4,6 +4,7 @@ import InternationalHealthcareNetwork from '@/components/exports/InternationalHe
 import RegulatoryCompliance from '@/components/exports/RegulatoryCompliance'
 import TrustedManufacturerNetwork from '@/components/exports/TrustedManufacturerNetwork'
 import Map from '@/components/home/Map'
+import { createPageMetadata } from '@/lib/seo'
 import React from 'react'
 
 const page = () => {
@@ -20,3 +21,7 @@ const page = () => {
 }
 
 export default page
+
+export async function generateMetadata() {
+  return createPageMetadata("/exports");
+}

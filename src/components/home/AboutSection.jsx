@@ -209,9 +209,9 @@ export default function AboutSection() {
         {/* ───────────────────────────── */}
         {/* TOP CONTENT */}
         {/* ───────────────────────────── */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center text-justify">
           <div ref={headingRef} className="w-full max-w-[52rem] text-center">
-            <h2 className="flex flex-wrap justify-center gap-x-2 font-light">
+            <h2 className="flex flex-wrap justify-center gap-x-2 font-light text-justify">
               {[
                 "Indosol",
                 "Exports",
