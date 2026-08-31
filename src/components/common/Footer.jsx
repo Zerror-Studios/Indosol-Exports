@@ -154,7 +154,7 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-5 max-sm:flex-col w-fit h-fit  relative max-sm:mx-auto">
-              <MdEmail className="text-white mt-1" />
+              <MdEmail className="text-white mt-1 max-sm:mx-auto" />
               <div className="flex flex-col ">
                 {[
                   "bimal@iscpl.com",
