@@ -1,15 +1,59 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactSection() {
   const sectionRef = useRef(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.firstName || !formData.phone || !formData.email || !formData.message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        toast.success("Message sent successfully!");
+        setFormData({ firstName: "", lastName: "", phone: "", email: "", message: "" });
+      } else {
+        toast.error(data.error || "Failed to send message.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -151,7 +195,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left Form */}
           <div className="contact-form pt-[4rem] pr-[3vw]">
-            <form className="w-full">
+            <form className="w-full" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.6rem]">
                 {/* First Name */}
                 <div className="input-field w-full">
@@ -162,6 +206,9 @@ export default function ContactSection() {
 
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     placeholder="First name"
                     className="w-full h-[3.8rem] bg-white border border-[#e5e7eb] rounded-[0.6rem] px-[1rem] text-[1rem] outline-none transition-all duration-300 focus:border-[#1846b3]"
                   />
@@ -176,6 +223,9 @@ export default function ContactSection() {
 
                   <input
                     type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     placeholder="Last name"
                     className="w-full h-[3.8rem] bg-white border border-[#e5e7eb] rounded-[0.6rem] px-[1rem] text-[1rem] outline-none transition-all duration-300 focus:border-[#1846b3]"
                   />
@@ -190,6 +240,9 @@ export default function ContactSection() {
 
                   <input
                     type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="(xxx) xxx xxxx"
                     className="w-full h-[3.8rem] bg-white border border-[#e5e7eb] rounded-[0.6rem] px-[1rem] text-[1rem] outline-none transition-all duration-300 focus:border-[#1846b3]"
                   />
@@ -204,6 +257,9 @@ export default function ContactSection() {
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="support@example.com"
                     className="w-full h-[3.8rem] bg-white border border-[#e5e7eb] rounded-[0.6rem] px-[1rem] text-[1rem] outline-none transition-all duration-300 focus:border-[#1846b3]"
                   />
@@ -218,6 +274,9 @@ export default function ContactSection() {
                 </label>
 
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Type Message..."
                   className="w-full h-[12rem] bg-white border border-[#e5e7eb] rounded-[0.6rem] p-[1rem] text-[1rem] outline-none resize-none transition-all duration-300 focus:border-[#1846b3]"
                 />
@@ -228,20 +287,21 @@ export default function ContactSection() {
                 By submitting this form, you agree to our <Link href={`/privacy-policy`}> <span className="TextBlue underline"> Privacy Policy</span> </Link> and to
                 share your interaction data to improve the quality and relevance
                 of this service.
-              
-                <button className="flex items-center sm:my-5 gap-[1rem] py-[0.8rem] mt-10  BgBlue  rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group">
-                <span className="text-[1rem] text-white  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
-                  Submit Message
-                </span>
 
-                <div className="w-[2rem] h-[2rem] right-0 absolute rounded-full TextBlue bg-white flex items-center justify-center text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
-                  <FaArrowRight />
-                </div>
-              </button>
+                <button type="submit" disabled={isSubmitting} className="submit-btn flex items-center sm:my-5 gap-[1rem] py-[0.8rem] mt-10  BgBlue  rounded-full overflow-hidden  py-[0.4rem]  pl-[1rem] pr-[1rem] duration-300 hover:scale-[1.1] group disabled:opacity-70 disabled:cursor-not-allowed">
+                  <span className="text-[1rem] text-white  transition-all duration-300 group-hover:-translate-x-2 group-hover:mr-[2rem]">
+                    {isSubmitting ? "Submitting..." : "Submit Message"}
+                  </span>
+
+                  <div className="submit-arrow w-[2rem] h-[2rem] right-0 absolute rounded-full TextBlue bg-white flex items-center justify-center text-[0.9rem] transition-all duration-300 translate-x-10 opacity-0 group-hover:translate-x-[-0.3rem] group-hover:opacity-100">
+                    <FaArrowRight />
+                  </div>
+                </button>
               </div>
 
               {/* Button */}
             </form>
+            <ToastContainer position="bottom-right" />
           </div>
 
           {/* Right Content */}
