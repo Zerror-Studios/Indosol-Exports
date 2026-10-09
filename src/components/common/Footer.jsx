@@ -144,6 +144,13 @@ export default function Footer() {
                   +91 98193 88509
                 </a>
 
+                 <a
+                  href="tel:+918976099606"
+                  className="hover:text-white transition"
+                >
+                  +91 89760 99606
+                </a>
+
                 <a
                   href="tel:+919821164770"
                   className="hover:text-white transition"
@@ -159,6 +166,7 @@ export default function Footer() {
                 {[
                   "bimal@iscpl.com",
                   "mshah0307@gmail.com",
+                  "pranay@indosolexports.in",
                   "admin@indosolexports.in",
                 ].map((email) => (
                   <a

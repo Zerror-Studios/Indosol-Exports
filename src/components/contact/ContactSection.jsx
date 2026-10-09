@@ -336,6 +336,7 @@ export default function ContactSection() {
                   {[
                     "bimal@iscpl.com",
                     "mshah0307@gmail.com",
+                    "pranay@indosolexports.in",
                     "admin@indosolexports.in",
                   ].map((email) => (
                     <a
@@ -356,14 +357,34 @@ export default function ContactSection() {
                 </h4>
 
                 <div className="flex flex-col gap-[0.8rem]">
-                  <p className="text-[1rem] TextLiteGray">
-                    +91-22-2287 8889/ 90/ 91
-                  </p>
+  <a
+    href="tel:+91-22-2287-8889"
+    className="w-fit border-b border-transparent text-[1rem] leading-[1rem] TextLiteGray transition-all duration-300 hover:border-b hover:border-current"
+  >
+    +91-22-2287 8889/ 90/ 91
+  </a>
 
-                  <p className="text-[1rem] TextLiteGray">+ 91 98193 88509</p>
+  <a
+    href="tel:+919819388509"
+    className="w-fit border-b border-transparent text-[1rem] leading-[1rem] TextLiteGray transition-all duration-300 hover:border-b hover:border-current"
+  >
+    + 91 98193 88509
+  </a>
 
-                  <p className="text-[1rem] TextLiteGray">+ 91 98211 64770</p>
-                </div>
+  <a
+    href="tel:+918976099606"
+    className="w-fit border-b border-transparent text-[1rem] leading-[1rem] TextLiteGray transition-all duration-300 hover:border-b hover:border-current"
+  >
+    +91 89760 99606
+  </a>
+
+  <a
+    href="tel:+919821164770"
+    className="w-fit border-b border-transparent text-[1rem] leading-[1rem] TextLiteGray transition-all duration-300 hover:border-b hover:border-current"
+  >
+    + 91 98211 64770
+  </a>
+</div>
               </div>
             </div>
           </div>
